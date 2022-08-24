@@ -1,6 +1,6 @@
 # Rancid Tomatillos!!!
 
-## [insert README template]
+## [insert README template here]
 
 <!-- # Getting Started with Create React App
 
