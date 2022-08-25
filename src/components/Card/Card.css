@@ -1,0 +1,30 @@
+.movie-card {
+  display: flex;
+  /* flex-direction: column; */
+  height: 200px;
+  width: 150px;
+  box-sizing: border-box;
+}
+
+.mini-poster {
+  height: 100%;
+  width: 100%
+}
+
+.logo {
+  position: absolute;
+  height: 3%;
+  width: auto;
+}
+
+.rating {
+  margin: 0px 0px 0px 125px;
+  flex-direction: column;
+  position: absolute;
+  align-self: flex-end;
+  justify-self: flex-end;
+  height: 5%;
+  width: auto;
+  color: black;
+  background-color: rgb(255, 255, 255, .6);
+}
