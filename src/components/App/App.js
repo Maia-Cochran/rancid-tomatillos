@@ -4,8 +4,6 @@ import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
 import movieData from '../../data'
 
-console.log(movieData.movies)
-
 class App extends Component {
     constructor (){
     super();
