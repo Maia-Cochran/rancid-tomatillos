@@ -2,24 +2,26 @@ import React, { Component } from 'react';
 import Header from '../Header/Header'
 import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
-
-
+import movieData from '../../data'
 
 class App extends Component {
     constructor (){
     super();
     this.state ={
-        movie: [],
+        movies: movieData.movies,
         result: ``
       }
-   
     }
+
+addMovies = (movies) => {
+  this.setState({ movies: [...this.state.movies, movies] })
+}
 
 render(){
     return (
         <main className = 'App'>
             <Header />
-            <MovieContainer />     
+            <MovieContainer movies={this.state.movies}/>     
         </main>
     )
   };
