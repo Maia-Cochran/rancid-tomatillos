@@ -3,13 +3,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: purple;
-    box-shadow: 8.0px 16.0px 16.0px rgb(241, 109, 15, 0.25);
-    --shadow-color: rgb(116, 80, 14);
+    color: white;
+    background-color: rgb(147, 49, 28, .8);
+    box-shadow: 8.0px 16.0px 16.0px rgb(147, 149, 28, 0.25);
+    --shadow-color: purple;
 }
 
 h1{
-    font-size: 70px;
+    font-size: 30px;
     margin: 1rem;
     filter: drop-shadow(10px 6px 4px rgba(241, 109, 15, 0.25));
     --shadow-color: rgb(116, 80, 14);

@@ -7,10 +7,10 @@ import './Header.css';
 export default function Header() {
     return (
       <div className="header-container">
-        <h1>Rotten Tomatillos</h1>
+        <h1>Rancid Tomatillos</h1>
+        <img className='logo' src="../images/rancid-tomatillos.svg" alt='' />
       </div>
     )
   }
   
 
-  

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header'
-import Card from '../Card/Card';
+import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
 
 
@@ -19,7 +19,7 @@ render(){
     return (
         <main className = 'App'>
             <Header />
-            <Card />     
+            <MovieContainer />     
         </main>
     )
   };
