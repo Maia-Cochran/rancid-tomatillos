@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Card.css';
 
-const Card = ({ logo, posterImage, rating, id }) => {
+const Card = ({ logo, posterImage, rating, id, selectAMovie }) => {
   return (
-    <div className='movie-card'>
-      <img className='mini-poster' src={posterImage} alt='poster image'/>
+    <div className='movie-card' onClick={(event) => selectAMovie(event)}>
+      <img className='mini-poster' id={id} src={posterImage} alt='poster'/>
       <img className='logo' src={logo} alt='logo'/>
       <p className='rating'>{rating}</p>
     </div>
