@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header'
 import MovieContainer from '../MovieContainer/MovieContainer';
+import MovieDetails from '../Modal/Modal'; 
 import './App.css';
-import movieData from '../../data'
+// import movieData from '../../data'
 import { getAllData } from '../../api-calls';
 
 
@@ -29,7 +30,7 @@ selectAMovie = (event) => {
       selectedMovie = movie
     }
   })
-  console.log(selectedMovie.title)
+  console.log(selectedMovie)
   return selectedMovie
 }
 
@@ -38,7 +39,8 @@ render(){
         <main className='app'>
             <Header />
             <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/>   
-            {/* {event.target.className.contains('movie-card') && <Modal id=event.target.id/>}   */}
+            <MovieDetails />
+            {/* {this.selectAMovie() && <MovieDetails/>}   */}
         </main>
     )
   };
