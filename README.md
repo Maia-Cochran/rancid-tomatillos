@@ -26,9 +26,9 @@ Rancid Tomatillos is an application that allows a user to browse through a list 
 
 ## Contributors
 
-- [Chantal Goethals](https://github.com/goecha)
-- [Maia Cochran](https://github.com/Maia-Cochran)
-- [Tom Fettig](https://github.com/tfettig22)
+- [Chantal Goethals](https://github.com/goecha) | [LinkedIn](https://www.linkedin.com/in/chantalgoethalsgoecha/)
+- [Maia Cochran](https://github.com/Maia-Cochran) | [LinkedIn](https://www.linkedin.com/in/maiaecochran/)
+- [Tom Fettig](https://github.com/tfettig22) | [LinkedIn](https://www.linkedin.com/in/tom-fettig-86323a115/)
 
 
 ## Set Up
