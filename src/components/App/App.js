@@ -35,7 +35,7 @@ selectAMovie = (event) => {
 
 render(){
     return (
-        <main className = 'App'>
+        <main className='app'>
             <Header />
             <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/>   
             {/* {event.target.className.contains('movie-card') && <Modal id=event.target.id/>}   */}
