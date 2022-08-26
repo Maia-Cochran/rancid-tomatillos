@@ -3,19 +3,24 @@ import Header from '../Header/Header'
 import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
 import movieData from '../../data'
+import { getAllData } from '../../api-calls';
+
 
 class App extends Component {
     constructor (){
     super();
     this.state ={
-        movies: movieData.movies,
+        movies: [],
         result: ``
       }
     }
 
-addMovies = (movies) => {
-  this.setState({ movies: [...this.state.movies, movies] })
+componentDidMount = () => {
+  getAllData()
+  .then(data => {this.setState({movies: [...this.state.movies, ...data[0].movies] })})
+  console.log(`this.state.movies`, this.state.movies)
 }
+
 
 selectAMovie = (event) => {
   let selectedMovie;
