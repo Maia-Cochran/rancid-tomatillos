@@ -1,17 +1,30 @@
 import React, { Component } from 'react';
+import ReactModal from 'react-modal';
+import ReactDOM from 'react-dom';
 import Header from '../Header/Header'
 import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
 import { getAllData } from '../../api-calls';
-import Modal from '../Modal/Modal'
+// import Modal from '../Modal/Modal'
 
 class App extends Component {
     constructor (){
     super();
     this.state ={
         movies: [],
-        result: ``
+        result: ``,
+        showModal: false
       }
+      this.handleOpenModal = this.handleOpenModal.bind(this);
+      this.handleCloseModal = this.handleCloseModal.bind(this);
+    }
+    
+    handleOpenModal () {
+      this.setState({ showModal: true });
+    }
+    
+    handleCloseModal () {
+      this.setState({ showModal: false });
     }
 
 componentDidMount = () => {
@@ -33,19 +46,26 @@ selectAMovie = (event) => {
 }
 
 
-render(event){
+
+render(){
     return (
         <main className='app'>
-            <Header />
-            <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie} />   
-         
-            {this.selectAMovie && <Modal />}
-
-
-
+            <Header />  
+            <MovieContainer onClick={this.handleOpenModal} movies={this.state.movies} selectAMovie={this.selectAMovie} keys={this.state.keys}/>
+            {/* {!<MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie} /> && <Modal isOpen={true}/>} */}
+        {/* <button >Trigger Modal</button> */}
+        <ReactModal 
+           isOpen={this.state.showModal}
+           contentLabel="Minimal Modal Example"
+           >
+          <button onClick={this.handleCloseModal}>Close Modal</button>
+        </ReactModal>
         </main>
     )
-  };
+  }
 }
+  const props = {};
 
+
+ReactDOM.render(<App {...props} />, document.getElementById('root'))
 export default App;
