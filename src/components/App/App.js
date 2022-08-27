@@ -12,6 +12,7 @@ class App extends Component {
     this.state ={
         movies: [],
         result: ``
+       
       }
     }
 
@@ -29,16 +30,17 @@ selectAMovie = (event) => {
       selectedMovie = movie
     }
   })
-  console.log(selectedMovie.title)
+  console.log(selectedMovie)
   return selectedMovie
 }
+
 
 render(){
     return (
         <main className='app'>
             <Header />
             <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/>   
-            {/* {event.target.className.contains('movie-card') && <Modal id=event.target.id/>}   */}
+            {/* {this.selectAMovie() && <MovieDetails/>} */}
         </main>
     )
   };
