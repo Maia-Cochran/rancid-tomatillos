@@ -12,3 +12,5 @@ const ModalInner = ({ logo, posterImage, rating, id, selectAMovie, backdropPath,
     </div>
   )
 }
+
+export default ModalInner

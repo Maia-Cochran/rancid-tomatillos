@@ -12,7 +12,7 @@ const MovieContainer = ({ movies, selectAMovie }) => {
         logo={logo}
         posterImage={movie.poster_path}
         rating={movie.average_rating.toFixed(1)}
-        id={movie.id}
+        // id={movie.id}
         key={movie.id}
         selectAMovie={selectAMovie}
       />

@@ -1,24 +1,35 @@
 import React from 'react';
+import Card from '../Card/Card'
+import MovieContainer from '../MovieContainer/MovieContainer'
 import ModalInner from '../ModalInner/ModalInner'
+import logo from '../../images/rancid-tomatillos.png'
 
+// export default function Modal() {
+//     return (
+//       <div className="modal-display">
+//         <ModalInner />
+//       </div>
+//     )
+//   }
 const Modal = ({ movies, selectAMovie }) => {
+    const movieCard = movies.map(movie => {
+        return(<Card 
+            logo = {logo}
+            posterImage={movie.poster_path}
+            rating={movie.average_rating.toFixed(1)}
+            // id={movie.id} 
+            key={movie.id}
+            selectAMovie={selectAMovie}
+            backdropPath={movie.backdrop_path}
+            releaseDate={movie.release_date}
+            />
+        )
+    })
     return (
-        <div className='modal'>
-            <div className='modal-content'>
-                <div className='modal-header'>
-                    <h4 className='modal-title'>Modal title</h4>
-                </div>
-                <div className='modal-body'>
-                <img className='mini-poster' id={id} src={posterImage} alt='poster'/>
-                <img className='logo' src={logo} alt='logo'/>
-                <p className='rating'>{rating}</p>
-                </div>
-                <div className='modal-footer'>
-                    <button className='button'>Close</button>
-                </div>
-            </div>       
-        </div>
-    )
-}
+        <div className ="modal-container">
+        {movieCard}
+      </div>
+        )
+    }
 
 export default Modal

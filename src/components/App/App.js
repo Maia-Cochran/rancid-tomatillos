@@ -37,7 +37,7 @@ render(event){
     return (
         <main className='app'>
             <Header />
-            <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/>   
+            <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie} />   
          
             {this.selectAMovie && <Modal />}
 
