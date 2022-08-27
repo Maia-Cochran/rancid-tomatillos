@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import Header from '../Header/Header'
 import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
-// import movieData from '../../data'
-import DisplayMovieDetails from '../DisplayMovieDetails/DisplayMovieDetails'
 import { getAllData } from '../../api-calls';
-
+import Modal from '../Modal/Modal'
 
 class App extends Component {
     constructor (){
@@ -30,31 +28,18 @@ selectAMovie = (event) => {
       selectedMovie = movie
     }
   })
-  console.log(selectedMovie)
+  console.log('SELECT A MOVIE FUNCTION RESULT: ', selectedMovie)
   return selectedMovie
 }
 
-// renderContentProp = () => {
-//   selectAMovie();
-//   // <DisplayMovieDetails
-//   // content={this.renderContentProp()}   
-//   // header="Delete this?"                
-//   // actions={this.renderActionButtons()}
-//   // onDismiss={this.onDismiss}
-//   // />
-// }
 
-// renderActionButtons = () = {
-
-// }
-
-render(){
+render(event){
     return (
         <main className='app'>
             <Header />
             <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/>   
          
-            {this.selectAMovie() && <DisplayMovieDetails />}
+            {this.selectAMovie && <Modal />}
 
 
 
@@ -62,6 +47,5 @@ render(){
     )
   };
 }
-
 
 export default App;
