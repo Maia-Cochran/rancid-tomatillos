@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header'
 import MovieContainer from '../MovieContainer/MovieContainer';
-import MovieDetails from '../Modal/Modal'; 
 import './App.css';
 // import movieData from '../../data'
+import DisplayMovieDetails from '../DisplayMovieDetails/DisplayMovieDetails'
 import { getAllData } from '../../api-calls';
 
 
@@ -34,13 +34,30 @@ selectAMovie = (event) => {
   return selectedMovie
 }
 
+// renderContentProp = () => {
+//   selectAMovie();
+//   // <DisplayMovieDetails
+//   // content={this.renderContentProp()}   
+//   // header="Delete this?"                
+//   // actions={this.renderActionButtons()}
+//   // onDismiss={this.onDismiss}
+//   // />
+// }
+
+// renderActionButtons = () = {
+
+// }
+
 render(){
     return (
         <main className='app'>
             <Header />
             <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/>   
-            <MovieDetails />
-            {/* {this.selectAMovie() && <MovieDetails/>}   */}
+         
+            {this.selectAMovie() && <DisplayMovieDetails />}
+
+
+
         </main>
     )
   };
