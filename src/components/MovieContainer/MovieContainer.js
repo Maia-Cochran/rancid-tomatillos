@@ -4,7 +4,7 @@ import './MovieContainer.css'
 import logo from '../../images/rancid-tomatillos.png'
 
 
-const MovieContainer = ({ movies, selectAMovie }) => {
+const MovieContainer = ({ movies, selectAMovie}) => {
 
   const movieCards = movies.map(movie => {
     return (
