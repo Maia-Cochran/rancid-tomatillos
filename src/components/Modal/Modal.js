@@ -2,7 +2,7 @@ import React from 'react';
 import './Modal.css';
 import logo from '../../images/rancid-tomatillos.png'
 
-const Modal = ({ props }) => {
+const Modal = ({ props, backToHome }) => {
   const [movie] = props;
   console.log(`props`, props)
   console.log(`[movie]`, movie)
@@ -20,11 +20,13 @@ const Modal = ({ props }) => {
     revenue,
     tagline,
   } = movie;
-  console.log(`tagline`, tagline)
+  
+
+    
   return (
     
     <div className='movie-info'> 
-      
+      <button className='back-to-home-btn' alt='homeBtn' onClick={backToHome}>🄧</button>
       <img className='modal-mini-poster' id={id} src={poster_path} alt='poster'/>
       <img className='modal-back-drop' id={id} src={backdrop_path} alt='poster'/>
       <img className='modal-logo' src={logo} alt='logo'/>
@@ -37,7 +39,6 @@ const Modal = ({ props }) => {
       <p className='runtime'>{runtime}</p>
       <p className='revenue'>{revenue}</p>
       <p className='tagline'>{tagline}</p>
-      
     </div>
     
   )

@@ -15,21 +15,10 @@ class App extends Component {
         result: ``,
         showModal: []
       }
-    }
-    //   this.handleOpenModal = this.handleOpenModal.bind(this);
-    //   this.handleCloseModal = this.handleCloseModal.bind(this);
-    // }
-    
-    // handleOpenModal () {
-    //   this.setState({ showModal: true });
-    // }
-    
-    // handleCloseModal () {
-    //   this.setState({ showModal: false });
-    
+    };
+
     componentDidMount = () => {
       getAllData()
-      // console.log(12345, getAllData())
       .then(data => {this.setState({movies: [...data[0].movies] })} )
       console.log(`this.state.movies`, this.state.movies)
     }
@@ -48,7 +37,11 @@ class App extends Component {
 
        this.setState({showModal: new Array(selectedMovie)})
       }
-      
+
+      backToHome = () => {
+      this.setState({showModal: []})
+      }
+         
       
       
       render = () => {
@@ -56,7 +49,7 @@ class App extends Component {
     return (
         <main className = 'App'>
           <Header />
-             { this.state.showModal.length ?(<Modal  props={this.state.showModal}/>) : (<MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/> )}   
+             { this.state.showModal.length ?(<Modal  props={this.state.showModal} backToHome={this.backToHome}/>) : (<MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/> )}   
         </main>
     )
   }
