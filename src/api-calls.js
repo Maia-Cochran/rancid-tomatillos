@@ -7,10 +7,12 @@ const fetchAllData = (dataType) => {
 const getAllData = () => {
   const result = Promise.all([fetchAllData('/movies')])
     .then(responses => {
-      return responses;
+      console.log( responses);
+      return responses
     })
     return result;
   }
 
  
 export { getAllData }
+
