@@ -1,19 +1,47 @@
 import React from 'react';
 import './Modal.css';
+import logo from '../../images/rancid-tomatillos.png'
 
 const Modal = ({ props }) => {
+  const [movie] = props;
+  console.log(`props`, props)
+  console.log(`[movie]`, movie)
+  const {
+    id,
+    title,
+    backdrop_path,
+    average_rating,
+    release_date,
+    overview,
+    genres,
+    budget,
+    poster_path,
+    runtime,
+    revenue,
+    tagline,
+  } = movie;
+  console.log(`tagline`, tagline)
   return (
+    
     <div className='movie-info'> 
-    <img className='modal-poster' src={`${props[0].backdrop_path}`} />
-    {/* <img className='modal-logo' src={logo} alt='logo'/> */}
-    <img className='modal-mini-poster' src={`${props[0].poster_path}`}/>
-    <p className='modal-release-date'>Release Date: {props[0].release_date} </p> 
-    <p className='modal-rating'>{props[0].rating} </p>
-    <p className='modal-title'>Title: {props[0].title}</p>
-    {/* <p className='modal-revenue'>Revenue: {props[0].revenue}</p> */}
-    {/* <p className='modal-runtime'>Runtime: {props[0].runtime}</p> */}
+      
+      <img className='modal-mini-poster' id={id} src={poster_path} alt='poster'/>
+      <img className='modal-back-drop' id={id} src={backdrop_path} alt='poster'/>
+      <img className='modal-logo' src={logo} alt='logo'/>
+      <p className='modal-rating'>{average_rating}</p>
+      <h2 className='modal-title'>{title}</h2>
+      <p className='modal-overview'>{overview}</p>
+      <p className='modal-release-date'>{release_date}</p>
+      <p className='genres'>{genres}</p>
+      <p className='budget'>{budget}</p>
+      <p className='runtime'>{runtime}</p>
+      <p className='revenue'>{revenue}</p>
+      <p className='tagline'>{tagline}</p>
+      
     </div>
+    
   )
+  
 }
 
 export default Modal
