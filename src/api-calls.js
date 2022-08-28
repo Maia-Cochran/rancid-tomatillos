@@ -4,8 +4,8 @@ const fetchAllData = (dataType) => {
     .catch(error => console.log(`API error: ${error.message}`));
   }
 
-const getAllData = () => {
-  const result = Promise.all([fetchAllData('/movies')])
+const getAllData = (data) => {
+  const result = Promise.all([fetchAllData(data)])
     .then(responses => {
       console.log( responses);
       return responses
