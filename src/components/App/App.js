@@ -18,24 +18,19 @@ class App extends Component {
     };
 
     componentDidMount = () => {
-      getAllData()
+      getAllData('/movies')
       .then(data => {this.setState({movies: [...data[0].movies] })} )
       console.log(`this.state.movies`, this.state.movies)
     }
     
     
     selectAMovie = (event) => {
-      let selectedMovie;
-      this.state.movies.forEach(movie => {
-        if( movie.id === parseInt(event.target.id)) {
-          console.log(`movie`, movie)
-          selectedMovie = movie
-        }
-      })
-      console.log('SELECT A MOVIE FUNCTION RESULT: ', selectedMovie)
-      //  return selectedMovie
-
-       this.setState({showModal: new Array(selectedMovie)})
+      let selectedMovie = `/movies/${parseInt(event.target.id)}`
+      getAllData(selectedMovie).then((data) => {
+        this.setState({showModal: new Array(data[0].movie)})
+        console.log(`data`, data)
+      }) 
+       
       }
 
       backToHome = () => {
@@ -45,7 +40,7 @@ class App extends Component {
       
       
       render = () => {
-  console.log(`Modal`, Modal)
+  // console.log(`Modal`, Modal)
     return (
         <main className = 'App'>
           <Header />
