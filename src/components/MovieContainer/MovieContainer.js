@@ -21,6 +21,8 @@ const MovieContainer = ({ movies, selectAMovie }) => {
 
   return (
     <div className ="movie-container">
+      <section className =''></section>
+      <section className =''></section>
       {movieCards}
     </div>
   )

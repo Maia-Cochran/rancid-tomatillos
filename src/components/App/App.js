@@ -44,7 +44,11 @@ class App extends Component {
     return (
         <main className = 'App'>
           <Header />
-             { this.state.showModal.length ?(<Modal  props={this.state.showModal} backToHome={this.backToHome}/>) : (<MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/> )}   
+             { this.state.showModal.length ?(
+                <Modal  props={this.state.showModal} backToHome={this.backToHome}/> 
+                ) : (
+                <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/> 
+                )}   
         </main>
     )
   }
