@@ -4,6 +4,13 @@
     height: 100%;
     width: 100%;
     margin: 0;
+    background: rgb(147, 49, 28, .8);
+    width: 100%;
+    margin-top: 0;
+}
+
+.home-btn-container {
+    margin-bottom: 10px;   
 }
 
 .back-to-home-btn {
@@ -61,16 +68,28 @@
     height: 50px;
     transform: rotate(0deg);
   }
-  
-.modal-mini-poster{
-position: absolute;
-height: 200px;
 
+.movie-details-container {
+    overflow: scroll;
+    height: 25%;
+    contain: content;
 }
 
-.modal-back-drop{
+.modal-mini-poster{
     position: absolute;
-    height: 100%;
+    height: 15%;
+    margin: 15px;
+    margin-top: 5%;
+}
+
+/* .rating-tagline-container {
+    justify-content: center;
+} */
+
+.modal-back-drop{
+    margin-top: 5%;
+    height: 50%;
+    width: 100%;
     background: linear-gradient(to bottom,
     rgba(64, 64, 64, 1) 0%,
     rgba(64, 64, 64, 0) 10%,
@@ -79,53 +98,73 @@ height: 200px;
     );
 }
 
-.modal-logo{
+/* .modal-logo{
     position: absolute;
     height: 30px;
+} */
+
+p {
+    margin: 3%;
+    font-size: small;
 }
 
-p{
-    margin: 0%;
-}
-.modal-rating{
+.rating{
     position: absolute;
     font-size: 20px;
-    color: white;
+    color: black;
+    margin-top: 45%;
+    margin-left: 35%;
 }
 
 .modal-title{
     position: absolute;
     height: 300px;
+    margin-left: 15%;
 }
 
-.modal-overview{
-    position: absolute;
+.modal-overview {
+    height: 25%;
+    width: 40%;
+    contain: content;
+    margin-left: 50%;
+    text-align: justify;
 }
 
 .modal-release-date{
     position: absolute;
+    margin-top: 6%;
+    margin-left: 15%;
 }
-
 
 .genres{
     position: absolute;
+    margin-top: 14%;
+    margin-left: 15%;
+    width: 20%;
 }
-
 
 .budget{
     position: absolute;
+    margin-top: 10%;
+    margin-left: 15%;
 }
-
 
 .runtime{
     position: absolute;
+    margin-top: 8%;
+    margin-left: 15%;
 }
-
 
 .revenue{
     position: absolute;
+    margin-top: 12%;
+    margin-left: 15%;
 }
 
 .tagline{
     position: absolute;
+    margin-top: 50%;
+    margin-left: 35%;
+    text-shadow: 5px 5px white;
+    font-size: larger;
 }
