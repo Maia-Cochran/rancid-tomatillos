@@ -1,9 +1,11 @@
 .movie-card {
   display: flex;
+  justify-content: flex-end;
   height: 20%;
-  width: 30%;
-  margin: 15px;
+  width: 10%;
+  margin: 5px;
   border: 3px solid #000000;
+  overflow-y: scroll;
 }
 
 .movie-card:hover {
@@ -18,13 +20,16 @@
 
 .logo {
   position: absolute;
-  height: 3%;
+  align-self: flex-start;
+  justify-self: flex-start;
+  margin-left: -22%;
+  height: 1%;
   width: auto;
 }
 
 .rating {
   display: flex;
-  margin: 0px 0px 0px 150px;
+  margin-left: 0px;
   flex-direction: column;
   position: absolute;
   align-self: flex-end;

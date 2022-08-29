@@ -6,6 +6,7 @@ import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
 import { getAllData } from '../../api-calls';
 import Modal from '../Modal/Modal'
+// import Carousel from '../Carousel/Carousel';
 
 class App extends Component {
     constructor (){
@@ -44,11 +45,17 @@ class App extends Component {
     return (
         <main className = 'App'>
           <Header />
+         
              { this.state.showModal.length ?(
                 <Modal  props={this.state.showModal} backToHome={this.backToHome}/> 
                 ) : (
-                <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/> 
-                )}   
+                  <>
+                   <img className="background" src='https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg' />
+                    <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/> 
+                   
+                   </>
+                )}  
+          
         </main>
     )
   }

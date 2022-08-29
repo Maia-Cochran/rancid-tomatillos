@@ -1,3 +1,7 @@
+*{
+  border: solid 1px, purple;
+}
+
 .movie-container {
   display: flex;
   flex-wrap: wrap;
@@ -8,4 +12,15 @@
   margin: 0%;
   height: 100%;
   width: 100%;
+}
+
+.movie-poster{
+  background-color: black;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  height: 100%;
+  width: 3000px;
+  margin-top:20%;
+  overflow-y: scroll;
 }
