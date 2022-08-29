@@ -22,8 +22,8 @@
   position: absolute;
   align-self: flex-start;
   justify-self: flex-start;
-  margin-left: -22%;
-  height: 1%;
+  margin-left: -7%;
+  height: 2%;
   width: auto;
 }
 
@@ -36,8 +36,10 @@
   align-items: center;
   justify-content: center;
   height:2%;
-  width: 5%;
+  width: 3%;
+  font-size: 7pt;
   color: black;
   background-color: rgb(255, 255, 255, .6);
   text-align: center;
+  box-sizing: border-box;
 }

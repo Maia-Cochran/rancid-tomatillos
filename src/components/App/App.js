@@ -45,12 +45,11 @@ class App extends Component {
     return (
         <main className = 'App'>
           <Header />
-         
              { this.state.showModal.length ?(
                 <Modal  props={this.state.showModal} backToHome={this.backToHome}/> 
                 ) : (
                   <>
-                   <img className="background" src='https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg' />
+                   <img className="background" src='https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg' alt=''/>
                     <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/> 
                    
                    </>
