@@ -25,24 +25,28 @@ const Modal = ({ props, backToHome }) => {
     
   return (
     
-    <div className='movie-info'> 
-      <button className='back-to-home-btn' alt='homeBtn' onClick={backToHome}>🄧</button>
-      <img className='modal-mini-poster' id={id} src={poster_path} alt='poster'/>
-      <img className='modal-back-drop' id={id} src={backdrop_path} alt='poster'/>
-      <img className='modal-logo' src={logo} alt='logo'/>
-      <p className='modal-rating'>{average_rating}</p>
-      <h2 className='modal-title'>{title}</h2>
-      <p className='modal-overview'>{overview}</p>
-      <p className='modal-release-date'>{release_date}</p>
-      <p className='genres'>{genres}</p>
-      <p className='budget'>{budget}</p>
-      <p className='runtime'>{runtime}</p>
-      <p className='revenue'>{revenue}</p>
-      <p className='tagline'>{tagline}</p>
-    </div>
+    <section className='movie-info'> 
+        <section className='home-btn-container'>
+            <button className='back-to-home-btn' alt='homeBtn' onClick={backToHome}>🄧</button>
+        </section>
+      <div className='movie-details-container'>
+        <img className='modal-mini-poster' id={id} src={poster_path} alt='poster'/>
+        <h2 className='modal-title'>{title}</h2>
+        <p className='modal-release-date'>{release_date}</p>
+        <p className='genres'>{genres}</p>
+        <p className='runtime'>{runtime}</p>
+        <p className='budget'>{budget}</p>
+        <p className='revenue'>{revenue}</p>
+        <p className='modal-overview'>{overview}</p>
+      </div>
+      <div className='rating-tagline-container'>
+        <img className='modal-back-drop' id={id} src={backdrop_path} alt='poster'/>
+        <p className='modal-rating'>{average_rating}</p>
+        <p className='tagline'>{tagline}</p>
+      </div>
+    </section>
     
   )
-  
 }
 
 export default Modal
