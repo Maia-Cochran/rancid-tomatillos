@@ -1,0 +1,10 @@
+.movie-poster{
+  background-color: black;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  height: 10%;
+  width: 3000px;
+  margin-top: 0%;
+  /* overflow-y: scroll; */
+}
