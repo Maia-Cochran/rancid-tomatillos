@@ -7,7 +7,6 @@ const fetchAllData = (dataType) => {
 const getAllData = (data) => {
   const result = Promise.all([fetchAllData(data)])
     .then(responses => {
-      console.log( responses);
       return responses
     })
     return result;
