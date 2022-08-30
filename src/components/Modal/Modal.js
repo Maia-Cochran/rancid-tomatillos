@@ -1,7 +1,9 @@
 import React from 'react';
 import './Modal.css';
-import logo from '../../images/rancid-tomatillos.png'
+// import logo from '../../images/rancid-tomatillos.png'
 import dayjs from 'dayjs'
+// import { NavLink } from 'react-router-dom'
+
 
 const Modal = ({ props, backToHome }) => {
   const [movie] = props;
