@@ -6,7 +6,7 @@ import dayjs from 'dayjs'
 
 
 const Modal = ({ props, backToHome }) => {
-  const [movie] = props;
+  const [movie] = props
   console.log(`props`, props)
   console.log(`[movie]`, movie)
   const {
@@ -22,10 +22,8 @@ const Modal = ({ props, backToHome }) => {
     runtime,
     revenue,
     tagline,
-  } = movie;
-  
-
-    
+   } = movie;
+      
   return (
     <section className='movie-info'> 
         <section className='home-btn-container'>

@@ -9,30 +9,27 @@ import { NavLink } from 'react-router-dom'
 
 
 
-const MovieContainer = ( {movies, id} ) => {
+const MovieContainer = ( {movies} ) => {
   
   const movieCards = movies.map(movie => {
     return (
-      
+      <NavLink to={`/modal/${movie.id}`} key={movie.id}>
       <Card
         logo={logo}
         posterImage={movie.poster_path}
         rating={movie.average_rating.toFixed(1)}
         id={movie.id}
         key={movie.id}
-        // selectAMovie={selectAMovie}
       />
-      
+      </NavLink>
     )
   })
   // console.log(movieCards)
  
   
   return (
-    <div className ="movie-container" >   
-       <NavLink to='/modal'>
+    <div className ="movie-container" >      
           {movieCards}
-        </NavLink>
     </div>
   )
 }
