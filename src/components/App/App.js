@@ -6,59 +6,36 @@ import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
 import { getAllData } from '../../api-calls';
 import Modal from '../Modal/Modal';
-import { Route, NavLink } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 // import Carousel from '../Carousel/Carousel';
 
 class App extends Component {
-    constructor (){
-    super();
-    this.state ={
-        movies: [],
-        result: ``,
-        showModal: []
-      }
-    };
-
-    componentDidMount = () => {
-      getAllData('/movies')
-      .then(data => { this.setState({ movies: [...data[0].movies] }) })
-      console.log(`this.state.movies`, this.state.movies)
+  constructor (){
+  super();
+  this.state ={
+      movies: [],
+      result: ``,
+      showModal: []
     }
-    
-    selectAMovie = (event) => {
-      let selectedMovie = `/movies/${event.target.id}`
-      getAllData(selectedMovie).then((data) => {
-        this.setState({showModal: [data[0].movie]})
-        console.log(`data`, this.state.showModal)
-      })       
-    }
+  };
 
-      backToHome = () => {
-      this.setState({showModal: []})
-      }
-         
+  componentDidMount = () => {
+    getAllData('/movies').then(data => {
+    this.setState({ movies: [...data[0].movies] }) })
+  }
       
-      
-      render = () => {
-  // console.log(`Modal`, Modal)
+  render = () => {
     return (
-        <main className = 'App'>
-          <Header />
-          <Route path="/modal/:id" render={ () => <Modal props={this.state.showModal} backToHome={this.backToHome} /> } />
-          <Route path="/" render={ () => <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie} /> } />
-
-
-            //  {/* { this.state.showModal.length ?(
-            //     <Modal  props={this.state.showModal} backToHome={this.backToHome}/> 
-            //     ) : (
-            //       <>
-            //        <img className="background" src='https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg' alt=''/>
-            //         <MovieContainer movies={this.state.movies} selectAMovie={this.selectAMovie}/> 
-                   
-            //        </>
-            //     )}   */}
-          
-        </main>
+      <main className = 'App'>
+        <Header />
+        <Switch>
+          <Route exact path="/" render={ () => <MovieContainer movies={this.state.movies}/> } />
+          <Route exact path="/modal/:id" render={({match}) => {
+            const selectedMovie = this.state.movies.find(movie => movie.id === parseInt(match.params.id))
+            return <Modal movie={selectedMovie} />
+          }}/>  
+        </Switch> 
+      </main>
     )
   }
 }

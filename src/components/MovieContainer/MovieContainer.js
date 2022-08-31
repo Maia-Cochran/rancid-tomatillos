@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom'
 
 
 
-const MovieContainer = ( {movies, selectAMovie} ) => {
+const MovieContainer = ( {movies} ) => {
   
   const movieCards = movies.map(movie => {
     return (
@@ -20,7 +20,6 @@ const MovieContainer = ( {movies, selectAMovie} ) => {
           rating={movie.average_rating.toFixed(1)}
           id={movie.id}
           key={movie.id}
-          selectAMovie={selectAMovie}
         />
       </NavLink>
     )
