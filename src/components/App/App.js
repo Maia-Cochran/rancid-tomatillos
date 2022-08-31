@@ -5,19 +5,16 @@ import Header from '../Header/Header'
 import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
 import { getAllData } from '../../api-calls';
-import Modal from '../Modal/Modal';
+import SingleMovie from '../Modal/Modal';
 import { Route, Switch } from 'react-router-dom'
 // import Carousel from '../Carousel/Carousel';
-let selectedMovie;
 
 class App extends Component {
-  constructor (){
-  super();
-  this.state ={
-      movies: [],
-      result: ``,
-      showModal: [],
-    }
+  constructor () {
+    super();
+    this.state ={
+        movies: [],
+      }
   };
 
   componentDidMount = () => {
@@ -25,18 +22,6 @@ class App extends Component {
     this.setState({ movies: [...data[0].movies] })
     })
   }
-
-  // componentDidUpdate() {
-  //   if (selectedMovie !== null)
-  //   getAllData(`/movies/${id}`)
-  // }
-
-  // componentDidUpdate(prevProps) {
-  //   // Typical usage (don't forget to compare props):
-  //   if (this.props.userID !== prevProps.userID) {
-  //     this.fetchData(this.props.userID);
-  //   }
-  // }
       
   render = () => {
     return (
@@ -44,12 +29,7 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/" render={ () => <MovieContainer movies={this.state.movies}/> } />
-          <Route exact path="/modal/:id" render={({match}) => {
-            selectedMovie = this.state.movies.find(movie => movie.id === parseInt(match.params.id))
-            console.log(selectedMovie)
-            console.log(this.state.showModal)
-            return <Modal movie={selectedMovie} />
-          }}/>  
+          <Route exact path="/modal/:id" render={ ({match}) => <SingleMovie id={match.params.id} /> } />
         </Switch> 
       </main>
     )
