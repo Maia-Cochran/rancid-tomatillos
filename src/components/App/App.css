@@ -1,11 +1,17 @@
 .app {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
-.background{
+.footer {
+  height: 100%;
+  width: 100%;
+  font-size: 10em;
+}
+
+/* .background {
   display: flex;
   flex-wrap: wrap;
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.8) ,rgba(0, 0, 0, .8),rgba(0, 0, 0, .8),rgba(0, 0, 0, .5),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1), rgba(0, 0, 0, 1),rgba(0, 0, 0, 1));
@@ -17,7 +23,7 @@
   width: 100%;
 }
 
-/* .background{
+.background{
   display: flex;
   height: 100%;
   width: 100%;

@@ -6,7 +6,7 @@ import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
 import { getAllData } from '../../api-calls';
 import SingleMovie from '../Modal/Modal';
-import { Route, Switch } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 // import Carousel from '../Carousel/Carousel';
 
 class App extends Component {
@@ -25,12 +25,10 @@ class App extends Component {
       
   render = () => {
     return (
-      <main className = 'App'>
+      <main className = 'app'>
         <Header />
-        <Switch>
-          <Route exact path="/" render={ () => <MovieContainer movies={this.state.movies}/> } />
-          <Route exact path="/modal/:id" render={ ({match}) => <SingleMovie id={match.params.id} /> } />
-        </Switch> 
+        <Route exact path='/' render={ () => <MovieContainer movies={this.state.movies}/> } />
+        <Route exact path='/modal/:id' render={ ({match}) => <SingleMovie id={match.params.id} /> } />
       </main>
     )
   }

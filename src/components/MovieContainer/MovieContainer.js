@@ -13,9 +13,10 @@ const MovieContainer = ( {movies} ) => {
   
   const movieCards = movies.map(movie => {
     return (
-      <NavLink to={`/modal/${movie.id}`} key={movie.id}>
+      <NavLink className='navlink' to={`/modal/${movie.id}`} key={movie.id}>
         <Card
           logo={logo}
+          title={movie.title}
           posterImage={movie.poster_path}
           rating={movie.average_rating.toFixed(1)}
           id={movie.id}
