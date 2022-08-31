@@ -17,6 +17,7 @@ class App extends Component {
       movies: [],
       result: ``,
       showModal: [],
+      id2: '',
     }
   };
 
@@ -33,10 +34,14 @@ class App extends Component {
 
   // componentDidUpdate(prevProps) {
   //   // Typical usage (don't forget to compare props):
-  //   if (this.props.userID !== prevProps.userID) {
-  //     this.fetchData(this.props.userID);
+  //   if (this.props.id !== prevProps.id) {
+  //     this.fetchData(this.props.id);
   //   }
   // }
+
+
+  
+
       
   render = () => {
     return (
@@ -44,7 +49,7 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/" render={ () => <MovieContainer movies={this.state.movies}/> } />
-          <Route exact path="/modal/:id" render={({match}) => {
+          <Route path="/modal/:id" render={({match}) => {
             selectedMovie = this.state.movies.find(movie => movie.id === parseInt(match.params.id))
             console.log(selectedMovie)
             console.log(this.state.showModal)

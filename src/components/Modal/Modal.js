@@ -33,8 +33,8 @@ const Modal = ({ movie }) => {
         <p className='modal-release-date'><b>Release Date:</b> {dayjs(movie.release_date).format('MMM. D, YYYY')}</p>
         {/* <p className='genres'><b>Related Genres:</b> {(genres).join(', ')}</p> */}
         {/* <p className='runtime'><b>Runtime:</b> {runtime} minutes</p> */}
-        {/* <p className='budget'><b>Budget:</b> ${(budget).toLocaleString('en-US')}</p> */}
-        {/* <p className='revenue'><b>Box Office Revenue:</b> ${(revenue).toLocaleString('en-US')}</p> */}
+        {/* <p className='budget'><b>Budget:</b> ${(budget).toLocaleString('en-US')}</p>
+        <p className='revenue'><b>Box Office Revenue:</b> ${(revenue).toLocaleString('en-US')}</p> */}
         <section className='overview-container'>
           {/* <p className='modal-overview'><b>Overview:</b> {overview}</p> */}
         </section>
