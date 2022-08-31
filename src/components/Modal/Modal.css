@@ -5,8 +5,6 @@
     width: 100%;
     margin: 0;
     background: rgb(147, 49, 28, .8);
-    width: 100%;
-    margin-top: 0;
 }
 
 .home-btn-container {
@@ -15,7 +13,7 @@
 
 .back-to-home-btn {
     background: none;
-    border: 0;
+    border: none;
     box-sizing: border-box;
     color: transparent;
     cursor: pointer;
@@ -82,10 +80,6 @@
     margin-top: 5%;
 }
 
-/* .rating-tagline-container {
-    justify-content: center;
-} */
-
 .modal-back-drop{
     margin-top: 5%;
     height: 50%;
@@ -108,7 +102,7 @@ p {
     font-size: small;
 }
 
-.rating{
+.modal-rating{
     position: absolute;
     font-size: 20px;
     color: black;

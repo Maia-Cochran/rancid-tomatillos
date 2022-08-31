@@ -20,7 +20,7 @@ class SingleMovie extends Component {
 
   render = () => {
     let movie = this.state.movie[0]
-    if (this.state.movie[0] === undefined) {
+    if (movie === undefined) {
       return 'Loading...'
     } else {
       return (
@@ -43,7 +43,7 @@ class SingleMovie extends Component {
           </section>
         </section>
         <section className='rating-tagline-container'>
-          <p className='rating'>{Math.round(movie.average_rating)} STARS</p>
+          <p className='modal-rating'>{Math.round(movie.average_rating)} STARS</p>
           <p className='tagline'><i>"{movie.tagline}"</i></p>
         </section>
         <img className='modal-back-drop' id={movie.id} src={movie.backdrop_path} alt='poster'/>

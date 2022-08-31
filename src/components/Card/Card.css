@@ -1,11 +1,10 @@
 .movie-card {
   display: flex;
-  justify-content: flex-end;
-  height: 20%;
-  width: 10%;
-  margin: 5px;
-  border: 3px solid #000000;
-  overflow-y: scroll;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  height: 100%;
+  width: 100%;
+  border: 1px solid #000000;
 }
 
 .movie-card:hover {
@@ -14,32 +13,40 @@
 }
 
 .mini-poster {
-  height: 100%;
+  height: 85%;
   width: 100%;
 }
 
+.title-logo-rating {
+  display: flex;
+  height: 15%;
+  width: 100%;
+  background-color: #3d3c3c;
+}
+
+.movie-title {
+  width: 70%;
+}
+
+.movie-title,
+.rating {
+display: flex;
+flex-direction: column;
+height: 100%;
+margin: 0px 5px 0px 0px;
+font-size: 1em;
+text-decoration: none;
+text-align: center;
+justify-content: center;
+color: white;
+}
+
 .logo {
-  position: absolute;
-  align-self: flex-start;
-  justify-self: flex-start;
-  margin-left: -7%;
-  height: 2%;
-  width: auto;
+  height: 50%;
+  align-self: center;
 }
 
 .rating {
-  display: flex;
-  margin-left: 0px;
-  flex-direction: column;
-  position: absolute;
-  align-self: flex-end;
-  align-items: center;
-  justify-content: center;
-  height:2%;
-  width: 3%;
-  font-size: 7pt;
-  color: black;
-  background-color: rgb(255, 255, 255, .6);
-  text-align: center;
-  box-sizing: border-box;
+  font-size: 1em;
+  height: 100%;
 }
