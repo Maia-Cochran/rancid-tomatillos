@@ -20,8 +20,9 @@ class App extends Component {
     };
 
     componentDidMount = () => {
-      getAllData('/movies')
-      .then(data => {this.setState({movies: [...data[0].movies] })} )
+      getAllData('/movies').then(data => {
+      this.setState({movies: [...data[0].movies] })
+    })
       // console.log(`this.state.movies`, this.state.movies)
     }
     
