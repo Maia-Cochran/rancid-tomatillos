@@ -12,6 +12,7 @@ class SingleMovie extends Component {
     }
   }
 
+  
   componentDidMount = () => {
     getAllData(`/movies/${this.props.id}`).then(data => {
       this.setState({ movie: [data[0].movie]})
@@ -34,12 +35,12 @@ class SingleMovie extends Component {
           <p className='modal-release-date'><b>Release Date:</b> {dayjs(movie.release_date).format('MMM. D, YYYY')}</p>
           <p className='genres'><b>Related Genres:</b> {(movie.genres).join(', ')}</p>
           <p className='runtime'><b>Runtime:</b> {movie.runtime} minutes</p>
-          <p className='budget'><b>Budget:</b> ${(movie.budget).toLocaleString('en-US')}</p>
-          <p className='revenue'><b>Box Office Revenue:</b> ${(movie.revenue).toLocaleString('en-US')}</p>
+          {movie.budget > 0 && <p className='budget'><b>Budget:</b> ${(movie.budget).toLocaleString('en-US')}</p>}
+          {movie.revenue > 0 && <p className='revenue'><b>Box Office Revenue:</b> ${(movie.revenue).toLocaleString('en-US')}</p>}
           <p className='modal-overview'><b>Overview:</b> {movie.overview}</p>
         </section>
           <p className='modal-rating'><i><b>Rating: </b>{(movie.average_rating).toFixed(1)}</i></p>
-          <p className='tagline'><i>"{movie.tagline}"</i></p>
+          {movie.tagline.length > 0 && <p className='tagline'><i>"{movie.tagline}"</i></p>}
           <img className='modal-back-drop' id={movie.id} src={movie.backdrop_path} alt='poster'/>
       </section>
       )

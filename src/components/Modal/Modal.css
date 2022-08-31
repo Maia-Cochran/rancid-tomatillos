@@ -1,10 +1,7 @@
-* {
-    border: purple solid
-}
-
 .movie-info{
     display: grid;
-    flex-direction: column;
+    justify-items: center;
+    align-items: center;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -16,7 +13,7 @@
 .back-to-home-btn {
     background-color: black;
     color: white;
-    margin-left: 95vw;
+    margin-left: 96vw;
 }
   
   .back-to-home-btn:hover {
@@ -49,13 +46,14 @@
 
 p {
     font-size: .75em;
+    margin: 2%;
 }
 
 
 .modal-title{
     position: absolute;
     height: 5vh;
-    margin-left: 15vw;
+    margin-left: 12vw;
 }
 
 .modal-overview {
@@ -63,7 +61,7 @@ p {
     width: 45vw;
     contain: content;
     margin-top: 3vh;
-    margin-left: 50vw;
+    margin-left: 45vw;
     text-align: center;
     flex-wrap: wrap;
 }
@@ -71,32 +69,32 @@ p {
 .modal-release-date{
     position: absolute;
     margin-top: 8vh;
-    margin-left: 15vw;
+    margin-left: 12vw;
 }
 
 .genres{
     position: absolute;
     margin-top: 16vh;
-    margin-left: 15vw;
+    margin-left: 12vw;
     width: 20vw;
 }
 
 .budget{
     position: absolute;
     margin-top: 12vh;
-    margin-left: 15vw;
+    margin-left: 12vw;
 }
 
 .runtime{
     position: absolute;
     margin-top: 10vh;
-    margin-left: 15vw;
+    margin-left: 12vw;
 }
 
 .revenue{
     position: absolute;
     margin-top: 14vh;
-    margin-left: 15vw;
+    margin-left: 12vw;
 }
 
 .modal-rating{
@@ -104,8 +102,9 @@ p {
     font-size: 2em;
     background-color: white;
     opacity: 50%;
-    margin-left: 45vw;
     margin-top: 75vh;
+    color: black;
+    font-weight: 500%;
 }
 
 .tagline{
@@ -114,9 +113,8 @@ p {
     text-align: center;
     opacity: 50%;
     contain: content;
-    margin-top: vh;
-    margin-left: 45vw;
-    margin-top: 45vh;
-    align-self: center;
+    margin-top: 60vh;
     font-size: larger;
+    color: black;
+    font-weight: 500%;
 }
