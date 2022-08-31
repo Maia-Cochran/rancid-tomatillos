@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-// import ReactModal from 'react-modal';
-// import ReactDOM from 'react-dom';
 import Header from '../Header/Header'
 import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
 import { getAllData } from '../../api-calls';
 import SingleMovie from '../Modal/Modal';
 import { Route } from 'react-router-dom'
-// import Carousel from '../Carousel/Carousel';
 
 class App extends Component {
   constructor () {
