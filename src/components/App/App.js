@@ -9,8 +9,9 @@ import SingleMovie from '../Modal/Modal';
 import { Route } from 'react-router-dom';
 // import Carousel from '../Carousel/Carousel';
 import NotFound from '../NotFound/NotFound';
+import InternalServerError from '../InternalServerError/InternalServerError';
 
-class App extends Component {
+class App extends Component{
   constructor () {
     super();
     this.state ={
@@ -33,6 +34,7 @@ class App extends Component {
         <Route exact path='/' render={ () => <MovieContainer movies={this.state.movies}/> } />
         <Route exact path='/modal/:id' render={ ({match}) => <SingleMovie id={match.params.id} /> } />
         <Route component={NotFound} />
+        <Route component={InternalServerError} />
       </main>
     )
   }
