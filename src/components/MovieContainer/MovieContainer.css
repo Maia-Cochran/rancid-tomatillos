@@ -29,6 +29,16 @@
   margin: 10px;
 }
 
+
+.swiper-container {
+  width: 80%;
+}
+
+.swiper-wrapper {
+  padding-inline-start: 0%;
+}
+
+
 /* .movie-poster {
   background-color: black;
   display: flex;
