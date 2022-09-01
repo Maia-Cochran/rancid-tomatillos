@@ -28,7 +28,7 @@ class SingleMovie extends Component {
         <NavLink to="/">
           <button className='back-to-home-btn' alt='homeBtn'>X</button>
         </NavLink>
-        {/* <section className='movie-details-container'> */}
+        <section className='movie-details-container'>
           <img className='modal-mini-poster' id={movie.id} src={movie.poster_path} alt='poster'/>
           <h2 className='modal-title'>{movie.title}</h2>
           <p className='modal-release-date'><b>Release Date:</b> {dayjs(movie.release_date).format('MMM. D, YYYY')}</p>
@@ -37,7 +37,7 @@ class SingleMovie extends Component {
           {movie.budget > 0 && <p className='budget'><b>Budget:</b> ${(movie.budget).toLocaleString('en-US')}</p>}
           {movie.revenue > 0 && <p className='revenue'><b>Box Office Revenue:</b> ${(movie.revenue).toLocaleString('en-US')}</p>}
           <p className='modal-overview'><b>Overview:</b> {movie.overview}</p>
-        {/* </section> */}
+        </section>
         <p className='modal-rating'><i><b>Rating: </b>{(movie.average_rating).toFixed(1)}</i></p>
         {movie.tagline.length > 0 && <p className='tagline'><i>"{movie.tagline}"</i></p>}
         <img className='modal-back-drop' id={movie.id} src={movie.backdrop_path} alt='poster'/>
