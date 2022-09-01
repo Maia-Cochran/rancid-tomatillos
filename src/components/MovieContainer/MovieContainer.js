@@ -3,11 +3,6 @@ import Card from '../Card/Card'
 import './MovieContainer.css'
 import logo from '../../images/rancid-tomatillos.png'
 import { NavLink } from 'react-router-dom'
-// import Carousel from './carousel-rect-rcdev'
-// import React, { useState, useEffect} from 'react';
-// import Carousel from '../Carousel/Carousel'
-
-
 
 const MovieContainer = ( {movies} ) => {
   

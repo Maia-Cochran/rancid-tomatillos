@@ -11,7 +11,6 @@ class SingleMovie extends Component {
       movie: [],
     }
   }
-
   
   componentDidMount = () => {
     getAllData(`/movies/${this.props.id}`).then(data => {

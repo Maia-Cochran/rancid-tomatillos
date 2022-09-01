@@ -1,9 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router-dom';
 
-
-
-
 const Status = ({ code, children }) => {
     return (
       <Route

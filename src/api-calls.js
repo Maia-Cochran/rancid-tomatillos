@@ -11,7 +11,6 @@ const getAllData = (data) => {
     })
     return result;
   }
-
  
 export { getAllData }
 
