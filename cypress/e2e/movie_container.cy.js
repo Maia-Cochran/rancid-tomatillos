@@ -33,4 +33,5 @@ describe('Movie Container user flows', () => {
     .location('pathname').should('eq', '/modal/597398')
     .go('back')
   })
+  //modal tests here 
 })
