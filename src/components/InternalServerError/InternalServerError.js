@@ -1,10 +1,6 @@
 import React from 'react'
 import Status from '../Status/Status';
 
-
-
-
-
 const NotFound = () => {
     return (
       <Status code={500}>
@@ -14,11 +10,6 @@ const NotFound = () => {
       </Status>
     );
   }
-  
-
-
-
-
 
   export default NotFound
 
