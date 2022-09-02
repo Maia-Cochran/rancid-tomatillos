@@ -48,35 +48,40 @@ class SingleMovie extends Component {
     } else {
       return (
       <section className='movie-info'> 
-        <NavLink to="/">
+        <NavLink to="/" className='link-to-home'>
           <button className='back-to-home-btn' alt='homeBtn'>X</button>
         </NavLink>
+        <img className='single-movie-back-drop' id={movie.id} src={movie.backdrop_path} alt='poster'/>
         <section className='movie-details-container'>
           <img className='single-movie-mini-poster' id={movie.id} src={movie.poster_path} alt='poster'/>
-          <h2 className='single-movie-title'>{movie.title}</h2>
-          <p className='single-movie-release-date'><b>Release Date:</b> {dayjs(movie.release_date).format('MMM. D, YYYY')}</p>
-          <p className='genres'><b>Related Genres:</b> {(movie.genres).join(', ')}</p>
-          <p className='runtime'><b>Runtime:</b> {movie.runtime} minutes</p>
-          {movie.budget > 0 && <p className='budget'><b>Budget:</b> ${(movie.budget).toLocaleString('en-US')}</p>}
-          {movie.revenue > 0 && <p className='revenue'><b>Box Office Revenue:</b> ${(movie.revenue).toLocaleString('en-US')}</p>}
-          <p className='single-movie-overview'><b>Overview:</b> {movie.overview}</p>
-        </section>
-        <p className='single-movie-rating'><i><b>Rating: </b>{(movie.average_rating).toFixed(1)}</i></p>
-        {movie.tagline.length > 0 && <p className='tagline'><i>"{movie.tagline}"</i></p>}
-        <img className='single-movie-back-drop' id={movie.id} src={movie.backdrop_path} alt='poster'/>
-        {videos.length > 0 && <section className='video-box'>
-          <div className='previous-btn-container'>
-            {videos.length > 1 && index > 0 && <button className='previous-video' onClick={this.previousVideo} >Previous</button>}
+          <div className='movie-details-box'>
+            <h2 className='single-movie-title'>{movie.title}</h2>
+            {movie.tagline.length > 0 && <p className='tagline'><i>"{movie.tagline}"</i></p>}
+            <p className='single-movie-overview'><b>Overview:</b> {movie.overview}</p>
+            <p className='single-movie-release-date'><b>Release Date:</b> {dayjs(movie.release_date).format('MMM. D, YYYY')}</p>
+            <p className='genres'><b>Related Genres:</b> {(movie.genres).join(', ')}</p>
+            <p className='runtime'><b>Runtime:</b> {movie.runtime} minutes</p>
+            {movie.budget > 0 && <p className='budget'><b>Budget:</b> ${(movie.budget).toLocaleString('en-US')}</p>}
+            {movie.revenue > 0 && <p className='revenue'><b>Box Office Revenue:</b> ${(movie.revenue).toLocaleString('en-US')}</p>}
+            <p className='single-movie-rating'><i><b>Rating: </b>{(movie.average_rating).toFixed(1)}</i></p>
           </div>
+        </section>
+        {videos.length > 0 && <section className='video-box'>
           <iframe className='movie-trailer'
             src={`https://www.youtube.com/embed/${this.state.video.key}`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             title="Embedded youtube"
-          />
-          <div className="next-btn-container">
-            {videos.length > 1 && index < videos.length - 1 && <button className='next-video' onClick={this.nextVideo} >Next</button>}
+            />
+          <div className='btn-container'>
+            {videos.length > 1 && <p className='video-counter'>{`${index+1}/${videos.length}`}</p>}
+            <div className="next-btn-container">
+              {videos.length > 1 && index < videos.length - 1 && <button className='next-video' onClick={this.nextVideo} >Next</button>}
+            </div>
+            <div className='previous-btn-container'>
+              {videos.length > 1 && index > 0 && <button className='previous-video' onClick={this.previousVideo} >Previous</button>}
+            </div>
           </div>
         </section>}
       </section>
