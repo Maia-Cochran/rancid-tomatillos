@@ -4,6 +4,10 @@ import dayjs from 'dayjs'
 import { NavLink } from 'react-router-dom'
 import { getAllData } from '../../api-calls';
 
+let movie;
+let videos;
+let index = 0
+
 class SingleMovie extends Component {
   constructor() {
     super();
@@ -16,17 +20,31 @@ class SingleMovie extends Component {
   componentDidMount = () => {
     getAllData(`/movies/${this.props.id}`).then(data => {
       this.setState({ movie: [data[0].movie] })
+      movie = data[0].movie
     })
     getAllData(`/movies/${this.props.id}/videos`).then(data => {
-      this.setState({ video: [data[0].videos] })
+      this.setState({ video: data[0].videos[0] })
+      videos = data[0].videos
     })
   }
 
+  nextVideo = () => {
+    if (index < videos.length - 1) {
+    index++
+    this.setState({ video: videos[index] })
+    }
+  }
+
+  previousVideo = () => {
+    if (index > 0) {
+      index--
+      this.setState({ video: videos[index] })
+    }
+  }
+
   render = () => {
-    let movie = this.state.movie[0]
-    let video = this.state.video[0]
-    if (movie === undefined || video === undefined) {
-      return 'Loading...'
+    if (movie === undefined || videos === undefined) {
+      return <p className='loading'>Loading...</p>
     } else {
       return (
       <section className='movie-info'> 
@@ -46,15 +64,21 @@ class SingleMovie extends Component {
         <p className='modal-rating'><i><b>Rating: </b>{(movie.average_rating).toFixed(1)}</i></p>
         {movie.tagline.length > 0 && <p className='tagline'><i>"{movie.tagline}"</i></p>}
         <img className='modal-back-drop' id={movie.id} src={movie.backdrop_path} alt='poster'/>
-        <iframe
-          width="853"
-          height="480"
-          src={`https://www.youtube.com/embed/${video[0].key}`}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title="Embedded youtube"
-        />
+        {videos.length > 0 && <section className='video-box'>
+          <div className='previous-btn-container'>
+            {videos.length > 1 && index > 0 && <button className='previous-video' onClick={this.previousVideo} >Previous</button>}
+          </div>
+          <iframe className='movie-trailer'
+            src={`https://www.youtube.com/embed/${this.state.video.key}`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title="Embedded youtube"
+          />
+          <div className="next-btn-container">
+            {videos.length > 1 && index < videos.length - 1 && <button className='next-video' onClick={this.nextVideo} >Next</button>}
+          </div>
+        </section>}
       </section>
       )
     }
