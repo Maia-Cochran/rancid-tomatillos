@@ -6,7 +6,7 @@ import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
 import { getAllData } from '../../api-calls';
 import SingleMovie from '../Modal/Modal';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 // import Carousel from '../Carousel/Carousel';
 import NotFound from '../NotFound/NotFound';
 import InternalServerError from '../InternalServerError/InternalServerError';
@@ -33,10 +33,12 @@ class App extends Component{
     return (
       <main className = 'app'>
         <Header />
-        <Route exact path='/' render={ () => <MovieContainer movies={this.state.movies}/> } />
-        <Route exact path='/modal/:id' render={ ({match}) => <SingleMovie id={match.params.id} /> } />
-        <Route component={NotFound} />
-        <Route component={InternalServerError} />
+        <Switch>
+          <Route exact path='/' render={ () => <MovieContainer movies={this.state.movies}/> } />
+          <Route exact path='/modal/:id' render={ ({match}) => <SingleMovie id={match.params.id} /> } />
+          <Route component={NotFound} />
+          <Route component={InternalServerError} />
+        </Switch>
       </main>
     )
   }
