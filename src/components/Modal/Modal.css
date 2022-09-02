@@ -16,16 +16,17 @@
     margin-left: 96vw;
 }
   
-  .back-to-home-btn:hover {
+.back-to-home-btn:hover {
     color: black;
     background-color: white;
-  }
+}
 
 .movie-details-container {
+    /* display: flex; */
     height: 29vh;
     contain: content;
 }
-
+/* ^^^^^NEED TO REFACTOR TO BE RESPONSIVE WITH PAGE */
 .modal-mini-poster {
     position: absolute;
     height: 20vh;
@@ -34,7 +35,7 @@
 
 .modal-back-drop{
     align-items: baseline;
-    height: 70vh;
+    height: 100vh;
     width: 100vw;
     background: linear-gradient(to bottom,
     rgba(64, 64, 64, 1) 0%,
@@ -66,38 +67,38 @@ p {
     flex-wrap: wrap;
 }
 
-.modal-release-date{
+.modal-release-date {
     position: absolute;
     margin-top: 8vh;
     margin-left: 12vw;
 }
 
-.genres{
+.genres {
     position: absolute;
     margin-top: 16vh;
     margin-left: 12vw;
     width: 20vw;
 }
 
-.budget{
+.budget {
     position: absolute;
     margin-top: 12vh;
     margin-left: 12vw;
 }
 
-.runtime{
+.runtime {
     position: absolute;
     margin-top: 10vh;
     margin-left: 12vw;
 }
 
-.revenue{
+.revenue {
     position: absolute;
     margin-top: 14vh;
     margin-left: 12vw;
 }
 
-.modal-rating{
+.modal-rating {
     position: absolute;
     font-size: 2em;
     background-color: white;
@@ -107,7 +108,7 @@ p {
     font-weight: 500%;
 }
 
-.tagline{
+.tagline {
     position: absolute;
     background: white;
     text-align: center;
