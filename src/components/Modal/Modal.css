@@ -119,3 +119,42 @@ p {
     color: black;
     font-weight: 500%;
 }
+
+.loading {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding-top: 80px;
+    color: white;
+    background-color: rgb(147, 49, 28, .8);
+    text-align: center;
+    font-size: 3em;
+}
+
+.video-box {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    height: 40%;
+    width: 42%;
+    right: 29%;
+    bottom: -40%;
+}
+
+.movie-trailer {
+    height: 100%;
+    width: 80%;
+}
+
+.previous-btn-container,
+.next-btn-container {
+    height: 10%;
+    width: 10%;
+    margin-bottom: 5px;
+}
+
+.previous-video,
+.next-video {
+    height: 100%;
+    width: 100%;
+}
