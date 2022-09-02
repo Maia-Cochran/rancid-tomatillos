@@ -16,7 +16,7 @@ class Card extends Component{
 
 
 render  () {
-  console.log(`this.props.id`, this.props.id)
+  // console.log(`this.props.id`, this.props.id)
   return (
     <div className='movie-card feature-wrapper' key={this.props.id}>
         <img className='mini-poster' src={this.props.posterImage} alt='poster' />
