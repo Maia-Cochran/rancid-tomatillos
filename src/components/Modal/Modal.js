@@ -9,18 +9,23 @@ class SingleMovie extends Component {
     super();
     this.state = {
       movie: [],
+      video: []
     }
   }
   
   componentDidMount = () => {
     getAllData(`/movies/${this.props.id}`).then(data => {
-      this.setState({ movie: [data[0].movie]})
+      this.setState({ movie: [data[0].movie] })
+    })
+    getAllData(`/movies/${this.props.id}/videos`).then(data => {
+      this.setState({ video: [data[0].videos] })
     })
   }
 
   render = () => {
     let movie = this.state.movie[0]
-    if (movie === undefined) {
+    let video = this.state.video[0]
+    if (movie === undefined || video === undefined) {
       return 'Loading...'
     } else {
       return (
@@ -41,6 +46,15 @@ class SingleMovie extends Component {
         <p className='modal-rating'><i><b>Rating: </b>{(movie.average_rating).toFixed(1)}</i></p>
         {movie.tagline.length > 0 && <p className='tagline'><i>"{movie.tagline}"</i></p>}
         <img className='modal-back-drop' id={movie.id} src={movie.backdrop_path} alt='poster'/>
+        <iframe
+          width="853"
+          height="480"
+          src={`https://www.youtube.com/embed/${video[0].key}`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="Embedded youtube"
+        />
       </section>
       )
     }

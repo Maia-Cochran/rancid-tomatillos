@@ -27,7 +27,7 @@
   height: 19%;
   width: 11%;
   margin: 10px;
-  contain: content;
+  border-radius: 10px;
 }
 
 /* .movie-poster {
