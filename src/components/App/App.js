@@ -18,6 +18,9 @@ class App extends Component{
     super();
     this.state ={
         movies: [],
+        movieKeyOne: ''
+        // movieKeyTwo: '',
+        // movieKeyThree: ''
       }
   };
 
@@ -34,7 +37,12 @@ class App extends Component{
       <main className = 'app'>
         <Header />
         <Switch>
-          <Route exact path='/' render={ () => <MovieContainer movies={this.state.movies}/> } />
+          <Route exact path='/' render={ () => 
+          <MovieContainer 
+                movies={this.state.movies} 
+                keyOne={this.state.movieKeyOne}
+                keyTwo={this.state.movieKeyTwo}
+                keyThree={this.state.movieKeyThree}/> } />
           <Route exact path='/modal/:id' render={ ({match}) => <SingleMovie id={match.params.id} /> } />
           <Route component={NotFound} />
           <Route component={InternalServerError} />

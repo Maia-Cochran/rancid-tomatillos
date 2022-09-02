@@ -2,7 +2,7 @@ import React from 'react'
 import Card from '../Card/Card'
 import './MovieContainer.css'
 import logo from '../../images/rancid-tomatillos.png'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -10,13 +10,12 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
 
-const MovieContainer = ( {movies} ) => {
+const MovieContainer = ( {movies, keyOne, keyTwo, keyThree} ) => {
   
   const movieCards = movies.map((movie) => {
     // console.log(`movie.id`, movie.id)
     return (
-      <NavLink className='nav' to={`/modal/${movie.id}`} key={movie.title}>
-        
+      // <NavLink className='nav' to={`/modal/${movie.id}`} key={movie.title}>    
         <Card
           logo={logo}
           title={movie.title}
@@ -25,25 +24,46 @@ const MovieContainer = ( {movies} ) => {
           id={movie.id}
           key={movie.id}
         />
-      
-      </NavLink>
+      // </NavLink>
     )
   })
 
+
   
+const singleSlideMovie = () => {
+  let movieArr2 = []
+  let movieInsert = movieCards.forEach((card) => {
+   if (!movieArr2.includes(card)){
+     movieArr2.push(card)
+   }
+     return  movieArr2
+  })
+  return movieInsert 
+}
+
   return (
     <div className ="movie-container" > 
       <React.Fragment>
       <Swiper
+        slidesPerView={3}
+        spaceBetween={3}
+        slidesPerGroup={3}
+        loop={true}
+        loopFillGroupWithBlank={true}
         cssMode={true}
         navigation={true}
-        pagination={true}
+        pagination={{clickable: true,}}
         mousewheel={true}
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="mySwiper"
+        key= {keyOne}
       >
-        <SwiperSlide>{movieCards}</SwiperSlide>
+        <SwiperSlide>1</SwiperSlide>
+        <SwiperSlide>2</SwiperSlide>
+        <SwiperSlide>3</SwiperSlide>
+        <SwiperSlide>4</SwiperSlide>
+        <SwiperSlide>5</SwiperSlide>
       </Swiper>
       
       </React.Fragment>

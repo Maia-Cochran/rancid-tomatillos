@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Card.css';
-
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -17,7 +17,9 @@ class Card extends Component{
 
 render  () {
   // console.log(`this.props.id`, this.props.id)
+ 
   return (
+    <NavLink className='nav' to={`/modal/${this.props.id}`} key={this.props.title}> 
     <div className='movie-card feature-wrapper' key={this.props.id}>
         <img className='mini-poster' src={this.props.posterImage} alt='poster' />
         <div className='title-logo-rating'>
@@ -26,6 +28,7 @@ render  () {
         <img className='logo' src={this.props.logo} alt='logo'/>
       </div>
     </div>
+    </NavLink>
    )
   }
 }
