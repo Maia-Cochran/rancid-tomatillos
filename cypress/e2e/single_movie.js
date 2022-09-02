@@ -1,6 +1,6 @@
 describe('empty spec', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/modal/597398')
+    cy.visit('http://localhost:3000/singlemovie/597398')
   })
   
   it('makes a call to the API to access data of single movie details', () => {
@@ -43,27 +43,27 @@ describe('empty spec', () => {
     .should('be.visible')
   })
   
-  it('should find the Modal with the single movie details', () =>{
+  it('should find the SingleMovie with the single movie details', () =>{
     cy.get('section[class="movie-info"]')
     .should('be.visible')
     .children()
     .should('be.visible')
     .get('[class*=movie-details-container]')
-    .get('[class*=modal-mini-poster]')
+    .get('[class*=single-movie-mini-poster]')
     .should('be.visible')
-    .get('[class*=modal-title]')
+    .get('[class*=single-movie-title]')
     .contains('Away')
-    .get('[class*=modal-release-date]')
+    .get('[class*=single-movie-release-date]')
     .contains('Nov. 15, 2019')
     .get('[class*=genres]')
     .contains('Animation, Adventure, Fantasy')
     .get('[class*=runtime]')
     .contains('75 minutes')
-    .get('[class*=modal-overview]')
+    .get('[class*=single-movie-overview]')
     .contains('Overview: After suffering a plane crash on a mysterious island, a young man embarks on an epic journey through forests, deserts and mountains trying to escape the shadow of a huge dark spirit.')
-    .get('[class*=modal-rating]')
+    .get('[class*=single-movie-rating]')
     .contains('4.2')
-    .get('[class*=modal-back-drop]')
+    .get('[class*=single-movie-back-drop]')
     .should('be.visible')
   })
 })

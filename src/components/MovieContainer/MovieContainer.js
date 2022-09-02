@@ -8,7 +8,7 @@ const MovieContainer = ( {movies} ) => {
   
   const movieCards = movies.map(movie => {
     return (
-      <NavLink className='navlink' to={`/modal/${movie.id}`} key={movie.id}>
+      <NavLink className='navlink' to={`/singlemovie/${movie.id}`} key={movie.id}>
         <Card
           logo={logo}
           title={movie.title}

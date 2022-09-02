@@ -22,16 +22,16 @@ describe('Movie Container user flows', () => {
     .should('have.length', 40)
   })
 
-  it('should be able to click on a movie card and go to Modal', () => {
+  it('should be able to click on a movie card and go to SingleMovie', () => {
     cy.get('div[class="movie-card"]')
     .contains('Money Plane')
     .click()
-    .location('pathname').should('eq', '/modal/694919')
+    .location('pathname').should('eq', '/singlemovie/694919')
     .go('back')
     .contains('Away')
     .click()
-    .location('pathname').should('eq', '/modal/597398')
+    .location('pathname').should('eq', '/singlemovie/597398')
     .go('back')
   })
-  //modal tests here 
+  //single-movie tests here 
 })
