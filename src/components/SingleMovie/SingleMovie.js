@@ -67,7 +67,7 @@ class SingleMovie extends Component {
             <p className='runtime'><b>Runtime:</b> {movie.runtime} minutes</p>
             {movie.budget > 0 && <p className='budget'><b>Budget:</b> ${(movie.budget).toLocaleString('en-US')}</p>}
             {movie.revenue > 0 && <p className='revenue'><b>Box Office Revenue:</b> ${(movie.revenue).toLocaleString('en-US')}</p>}
-            <p className='single-movie-rating'><i><b>Rating: </b>{(movie.average_rating).toFixed(1)}</i></p>
+            <p className='single-movie-rating'><i><b>Avg. Rating: </b>{(movie.average_rating).toFixed(1)}/10</i></p>
           </div>
         </section>
         {videos.length > 0 && <section className='video-box'>
