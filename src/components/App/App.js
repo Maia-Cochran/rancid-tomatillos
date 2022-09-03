@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-// import ReactModal from 'react-modal';
-// import ReactDOM from 'react-dom';
 import Header from '../Header/Header'
 import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
 import { getAllData } from '../../api-calls';
-import SingleMovie from '../Modal/Modal';
-import { Route, Switch } from 'react-router-dom';
-// import Carousel from '../Carousel/Carousel';
+import Modal from "../Modal/Modal"
 import NotFound from '../NotFound/NotFound';
 import InternalServerError from '../InternalServerError/InternalServerError';
-
+import { Route, Switch } from 'react-router-dom';
 
 
 class App extends Component{
@@ -18,9 +14,6 @@ class App extends Component{
     super();
     this.state ={
         movies: [],
-        movieKeyOne: ''
-        // movieKeyTwo: '',
-        // movieKeyThree: ''
       }
   };
 
@@ -37,15 +30,10 @@ class App extends Component{
       <main className = 'app'>
         <Header />
         <Switch>
-          <Route exact path='/' render={ () => 
-          <MovieContainer 
-                movies={this.state.movies} 
-                keyOne={this.state.movieKeyOne}
-                keyTwo={this.state.movieKeyTwo}
-                keyThree={this.state.movieKeyThree}/> } />
-          <Route exact path='/modal/:id' render={ ({match}) => <SingleMovie id={match.params.id} /> } />
-          <Route component={NotFound} />
+          <Route exact path='/' render={ () => <MovieContainer movies={this.state.movies}/> } />
+          <Route exact path='/modal/:id' render={ ({match}) => <Modal id={match.params.id} /> } />
           <Route component={InternalServerError} />
+          <Route component={NotFound} />
         </Switch>
       </main>
     )

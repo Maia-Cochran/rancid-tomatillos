@@ -1,6 +1,6 @@
 import React from 'react'
 import Status from '../Status/Status';
-
+import './NotFound.css';
 
 
 

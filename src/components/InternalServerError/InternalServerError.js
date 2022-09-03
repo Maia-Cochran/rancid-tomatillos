@@ -1,11 +1,11 @@
 import React from 'react'
 import Status from '../Status/Status';
+import "./InternalServerError.css"
 
 
 
 
-
-const NotFound = () => {
+const InternalServerError = () => {
     return (
       <Status code={500}>
         <div>
@@ -20,7 +20,7 @@ const NotFound = () => {
 
 
 
-  export default NotFound
+  export default InternalServerError
 
 
 

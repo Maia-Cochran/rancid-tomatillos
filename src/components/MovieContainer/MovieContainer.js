@@ -2,20 +2,21 @@ import React from 'react'
 import Card from '../Card/Card'
 import './MovieContainer.css'
 import logo from '../../images/rancid-tomatillos.png'
-// import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/mousewheel";
 // import "./styles.css";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import { Parallax, Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+// import SlideNextButton from '../SlideNextButton/SlideNextButton'
 
-
-const MovieContainer = ( {movies, keyOne, keyTwo, keyThree} ) => {
+const MovieContainer = ( {movies} ) => {
   
   const movieCards = movies.map((movie) => {
     // console.log(`movie.id`, movie.id)
     return (
-      // <NavLink className='nav' to={`/modal/${movie.id}`} key={movie.title}>    
+      
         <Card
           logo={logo}
           title={movie.title}
@@ -24,49 +25,120 @@ const MovieContainer = ( {movies, keyOne, keyTwo, keyThree} ) => {
           id={movie.id}
           key={movie.id}
         />
-      // </NavLink>
+      //  </NavLink>
     )
   })
 
 
-  
-const singleSlideMovie = () => {
-  let movieArr2 = []
-  let movieInsert = movieCards.forEach((card) => {
-   if (!movieArr2.includes(card)){
-     movieArr2.push(card)
-   }
-     return  movieArr2
-  })
-  return movieInsert 
-}
+  //  console.log({movieCards})
 
   return (
     <div className ="movie-container" > 
       <React.Fragment>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={3}
-        slidesPerGroup={3}
-        loop={true}
-        loopFillGroupWithBlank={true}
-        cssMode={true}
-        navigation={true}
-        pagination={{clickable: true,}}
-        mousewheel={true}
-        keyboard={true}
-        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        className="mySwiper"
-        key= {keyOne}
-      >
-        <SwiperSlide>1</SwiperSlide>
-        <SwiperSlide>2</SwiperSlide>
-        <SwiperSlide>3</SwiperSlide>
-        <SwiperSlide>4</SwiperSlide>
-        <SwiperSlide>5</SwiperSlide>
+      style={{
+        "--swiper-navigation-color": "#fff",
+        "--swiper-pagination-color": "#fff",
+      }}
+      speed={600}
+      parallax={true}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Parallax, Pagination, Navigation, Mousewheel, Keyboard]}
+      className="mySwiper"
+      slidesPerView={5}
+      slidesPerGroup={6}
+      cssMode={true}
+      mousewheel={true}
+      keyboard={true}
+      >   
+      <div
+          slot="container-start"
+          className="parallax-bg"
+          data-swiper-parallax="-23%"
+        ></div> 
+         <NavLink className='nav' to={`/modal/${movies.id}`} key={movies.title}>   
+          <SwiperSlide>{movieCards[0]}</SwiperSlide>
+          <SwiperSlide>{movieCards[1]}</SwiperSlide>
+          <SwiperSlide>{movieCards[2]}</SwiperSlide>
+          <SwiperSlide>{movieCards[4]}</SwiperSlide>
+          <SwiperSlide>{movieCards[5]}</SwiperSlide>
+          <SwiperSlide>{movieCards[6]}</SwiperSlide>
+          <SwiperSlide>{movieCards[7]}</SwiperSlide>
+          <SwiperSlide>{movieCards[8]}</SwiperSlide>
+          <SwiperSlide>{movieCards[9]}</SwiperSlide>
+          <SwiperSlide>{movieCards[10]}</SwiperSlide>
+          <SwiperSlide>{movieCards[11]}</SwiperSlide>
+          <SwiperSlide>{movieCards[12]}</SwiperSlide>
+          <SwiperSlide>{movieCards[13]}</SwiperSlide>
+          <SwiperSlide>{movieCards[14]}</SwiperSlide>
+          <SwiperSlide>{movieCards[15]}</SwiperSlide>
+          <SwiperSlide>{movieCards[16]}</SwiperSlide>
+          <SwiperSlide>{movieCards[17]}</SwiperSlide>
+          <SwiperSlide>{movieCards[18]}</SwiperSlide>
+          <SwiperSlide>{movieCards[19]}</SwiperSlide>
+          <SwiperSlide>{movieCards[20]}</SwiperSlide> 
+          </NavLink>
       </Swiper>
-      
       </React.Fragment>
+      <React.Fragment>
+      <Swiper
+      style={{
+        "--swiper-navigation-color": "#fff",
+        "--swiper-pagination-color": "#fff",
+      }}
+      speed={600}
+      parallax={true}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Parallax, Pagination, Navigation, Mousewheel, Keyboard]}
+      className="mySwiper"
+      slidesPerView={5}
+      slidesPerGroup={6}
+      cssMode={true}
+      mousewheel={true}
+      keyboard={true}
+      
+      // key= {keyOne}
+      >   
+      <div
+          slot="container-start"
+          className="parallax-bg"
+          // style={{
+          //   "background-image":
+          //     "url(https://swiperjs.com/demos/images/nature-1.jpg)",
+          // }}
+          data-swiper-parallax="-23%"
+        ></div> 
+         <NavLink className='nav' to={`/modal/${movies.id}`} key={movies.title}>   
+          <SwiperSlide>{movieCards[21]}</SwiperSlide>
+          <SwiperSlide>{movieCards[22]}</SwiperSlide>
+          <SwiperSlide>{movieCards[23]}</SwiperSlide>
+          <SwiperSlide>{movieCards[24]}</SwiperSlide>
+          <SwiperSlide>{movieCards[25]}</SwiperSlide>
+          <SwiperSlide>{movieCards[26]}</SwiperSlide>
+          <SwiperSlide>{movieCards[27]}</SwiperSlide>
+          <SwiperSlide>{movieCards[28]}</SwiperSlide>
+          <SwiperSlide>{movieCards[29]}</SwiperSlide>
+          <SwiperSlide>{movieCards[30]}</SwiperSlide>
+          <SwiperSlide>{movieCards[31]}</SwiperSlide>
+          <SwiperSlide>{movieCards[32]}</SwiperSlide>
+          <SwiperSlide>{movieCards[33]}</SwiperSlide>
+          <SwiperSlide>{movieCards[34]}</SwiperSlide>
+          <SwiperSlide>{movieCards[35]}</SwiperSlide>
+          <SwiperSlide>{movieCards[36]}</SwiperSlide>
+          <SwiperSlide>{movieCards[37]}</SwiperSlide>
+          <SwiperSlide>{movieCards[38]}</SwiperSlide>
+          <SwiperSlide>{movieCards[39]}</SwiperSlide>
+          <SwiperSlide>{movieCards[40]}</SwiperSlide> 
+          </NavLink>
+      </Swiper>
+      </React.Fragment>
+      
     </div>
   )
 }
@@ -75,126 +147,6 @@ const singleSlideMovie = () => {
 export default MovieContainer
 
 
-
-
-
-
-
-
-
-
-
-// ~~~~~~~~~~~~~~~~~~OLD~~~~~~~~~~~~~~~~~
-
-// import React from 'react'
-// import Card from '../Card/Card'
-// import './MovieContainer.css'
-// import logo from '../../images/rancid-tomatillos.png'
-// import { NavLink } from 'react-router-dom'
-// // import Carousel from './carousel-rect-rcdev'
-// // import React, { useState, useEffect} from 'react';
-// // import Carousel from '../Carousel/Carousel'
-// import { Swiper, SwiperSlide, useSwiper} from 'swiper/react'
-// // import { Swiper} from 'swiper/react'
-// import  {Navigation, Pagination, Scrollbar} from 'swiper'
-// // import './swiper/swiper-bundle.css'
-// import 'swiper/css';
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-
-// // SwiperCore.use([Navigation, Pagination]);
-
-
-// const MovieContainer = ( {movies} ) => {
-  
-//   const movieCards = movies.map((movie) => {
-//     // console.log(`movie.id`, movie.id)
-//     return (
-//       <NavLink className='nav' to={`/modal/${movie.id}`} key={movie.title}>
-        
-//         <Card
-//           logo={logo}
-//           title={movie.title}
-//           posterImage={movie.poster_path}
-//           rating={movie.average_rating.toFixed(1)}
-//           id={movie.id}
-//           key={movie.id}
-//         />
-      
-//       </NavLink>
-//     )
-//   })
-//   // console.log(movieCards)
-//   // const SlideNextButton = () => {
-//   //   const swiper = useSwiper();
-  
-//   //   return (
-//   //     <button onClick={() => swiper.slideNext()}>Slide to the next slide</button>
-//   //   );
-//   // }
-//   // Now you can use Swiper
-// // const swiper = new Swiper('.swiper', {
-// //   // Install modules
-// //   modules: [Navigation, Pagination, Scrollbar],
-// //   speed: 500,
-// //   navigation: {
-// //     nextEl: '.swiper-button-next',
-// //     prevEl: '.swiper-button-prev',
-// //   },
-// //   // ...
-// // });
-
-// //  const swiper = () => {new Swiper(
-// //   '.swiper', {modules: [Navigation, Pagination, Scrollbar],
-// //       speed: 500,
-// //       navigation: {
-// //         nextEl: '.swiper-button-next',
-// //         prevEl: '.swiper-button-prev'
-// //       }
-// //     })
-// //   }
-// //   cssMode={true},
-// //  navigation,
-// //  pagination={{ clickable: true }},
-// //  scrollbar={{ draggable: true }},
-// //  mousewheel={true},
-// //  keyboard={true},
-// //  tag="section" ,
-// //   wrapperTag="ul" ,
-// //   id="carousel" )
-  
-//   return (
-//     <div className ="movie-container" > 
-//       <React.Fragment>
-//        <Swiper  
-//          className='mySwiper'
-//          cssMode={true}
-//          navigation
-//          pagination={{ clickable: true }}
-//          scrollbar={{ draggable: true }}
-//          modules={[Pagination, Navigation]}
-//          mousewheel={true}
-//          keyboard={true}
-//         //  tag="section" 
-//           wrapperTag="ul" 
-//           id="carousel" 
-//           slidesPerView={3}
-//           spaceBetween={50}
-        
-//           // onSlideChange={() => console.log('slide change')}
-//           // onSwiper={(swiper) => console.log(swiper)}
-//           // modules={[Navigation, Pagination]}
-//           >
-//             {/* <SwiperSlide tag="li" onClick={swiper} > */}
-//             <SwiperSlide tag="li">
-//             {movieCards} 
-//             </SwiperSlide>
-          
-//         </Swiper>
-//       </React.Fragment>
-//     </div>
-//   )
-// }
 
 
 // export default MovieContainer
