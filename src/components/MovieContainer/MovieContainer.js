@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import Card from '../Card/Card'
 import './MovieContainer.css'
 import logo from '../../images/rancid-tomatillos.png'
@@ -35,18 +36,22 @@ const MovieContainer = ( {movies} ) => {
     return array[Math.floor(Math.random()*array.length)]; 
   }
 
+  let randomMovie
+
   const getRandomBackdrop = () => {
     if (movies.length > 0) {
-      return getRandomIndex(movies).backdrop_path
+      randomMovie = getRandomIndex(movies)
     }
   }
+  getRandomBackdrop();
 
   return (
-    <div className="movie-container" >
-        <img className = 'random-backdrop' src={`${getRandomBackdrop()}`} alt='featured backdrop'/>
-      <div className="movie-container-backdrop">
-      </div>
-      <React.Fragment className='top-swiper-container'>
+    <div className="movie-container">
+      <h1 className='new-header'>Rancid Tomatillos</h1>
+      {randomMovie !== undefined && <NavLink className='random-movie-title' to={`/singlemovie/${randomMovie.id}`} key={randomMovie.id}>{randomMovie.title}</NavLink>}
+      {randomMovie !== undefined && <img className='random-backdrop' src={randomMovie.backdrop_path} alt='featured backdrop'/>}
+      <div className="movie-container-backdrop"></div>
+      <div className='top-swiper-container'>
         <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
@@ -70,8 +75,8 @@ const MovieContainer = ( {movies} ) => {
           <div slot="container-start" className="parallax-bg" data-swiper-parallax="-23%"></div> 
           {movieSlidesUpper} 
         </Swiper>
-      </React.Fragment>
-      <React.Fragment className='bottom-swiper-container'>
+      </div>
+      <div className='bottom-swiper-container'>
         <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
@@ -95,7 +100,7 @@ const MovieContainer = ( {movies} ) => {
           <div slot="container-start" className="parallax-bg2" data-swiper-parallax="-23%"></div> 
           {movieSlidesLower}  
         </Swiper>
-      </React.Fragment>
+      </div>
     </div>
   )
 }

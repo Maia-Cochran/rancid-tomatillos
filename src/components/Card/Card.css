@@ -1,3 +1,7 @@
+.nav {
+  text-decoration: none;
+}
+
 .movie-card {
   display: flex;
   flex-direction: column;
@@ -5,8 +9,6 @@
   width: 100%;
   border: 1px solid #000000;
   overflow: hidden;
-  box-shadow: 4px 4px 3px rgb(77, 77, 77);
-
 }
 
 .movie-card:hover {
@@ -33,6 +35,7 @@
 
 .movie-title {
   width: 70%;
+  font-size: .7em;
 }
 
 .movie-title,
@@ -40,10 +43,8 @@
 display: flex;
 flex-direction: column;
 height: 100%;
-margin: 0px 5px 0px 0px;
-/* font-size: 1em; */
-text-decoration: none;
-text-align: center;
+margin: 0px 0px 0px 5px;
+text-align: left;
 justify-content: center;
 color: white;
 }
@@ -52,6 +53,7 @@ color: white;
   height: 50%;
   width: 10%;
   align-self: center;
+  margin-left: 3%;
 }
 
 .rating {

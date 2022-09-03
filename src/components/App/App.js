@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../Header/Header'
 import MovieContainer from '../MovieContainer/MovieContainer';
 import './App.css';
 import { getAllData } from '../../api-calls';
@@ -25,7 +24,6 @@ class App extends Component{
   render = () => {
     return (
       <main className = 'app'>
-        {/* <Header /> */}
         <Switch>
           <Route exact path='/' render={ () => <MovieContainer movies={this.state.movies}/> } />
           <Route exact path='/singlemovie/:id' render={ ({match}) => <SingleMovie id={match.params.id} /> } />
