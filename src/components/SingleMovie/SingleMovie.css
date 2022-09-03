@@ -72,127 +72,6 @@
     margin-bottom: 3%;
 }
 
-/* .movie-info{
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    background: rgb(147, 49, 28, .8);
-    color: whitesmoke;
-    text-decoration: black;
-}
-
-.back-to-home-btn {
-    background-color: black;
-    color: white;
-    margin-left: 96vw;
-}
-  
-.back-to-home-btn:hover {
-    color: black;
-    background-color: white;
-}
-
-.movie-details-container {
-    height: 29vh;
-    contain: content;
-}
-
-.single-movie-mini-poster {
-    position: absolute;
-    height: 20vh;
-    margin: 15px;
-}
-
-.single-movie-back-drop{
-    align-items: baseline;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(to bottom,
-    rgba(64, 64, 64, 1) 0%,
-    rgba(64, 64, 64, 0) 10%,
-    rgba(64, 64, 64, 0) 90%,
-    rgba(64, 64, 64, 1) 100%
-    );
-}
-
-p {
-    font-size: .75em;
-    margin: 2%;
-}
-
-
-.single-movie-title{
-    position: absolute;
-    height: 5vh;
-    margin-left: 12vw;
-}
-
-.single-movie-overview {
-    height: 20vh;
-    width: 45vw;
-    contain: content;
-    margin-top: 3vh;
-    margin-left: 45vw;
-    text-align: center;
-    flex-wrap: wrap;
-}
-
-.single-movie-release-date {
-    position: absolute;
-    margin-top: 8vh;
-    margin-left: 12vw;
-}
-
-.genres {
-    position: absolute;
-    margin-top: 16vh;
-    margin-left: 12vw;
-    width: 20vw;
-}
-
-.budget {
-    position: absolute;
-    margin-top: 12vh;
-    margin-left: 12vw;
-}
-
-.runtime {
-    position: absolute;
-    margin-top: 10vh;
-    margin-left: 12vw;
-}
-
-.revenue {
-    position: absolute;
-    margin-top: 14vh;
-    margin-left: 12vw;
-}
-
-.single-movie-rating {
-    position: absolute;
-    font-size: 2em;
-    background-color: white;
-    opacity: 50%;
-    margin-top: 75vh;
-    color: black;
-    font-weight: 500%;
-}
-
-.tagline {
-    position: absolute;
-    background: white;
-    text-align: center;
-    opacity: 50%;
-    contain: content;
-    margin-top: 60vh;
-    font-size: larger;
-    color: black;
-    font-weight: 500%;
-}
-
 .loading {
     height: 100%;
     width: 100%;
@@ -202,7 +81,7 @@ p {
     background-color: rgb(147, 49, 28, .8);
     text-align: center;
     font-size: 3em;
-} */
+}
 
 .video-box {
     display: flex;

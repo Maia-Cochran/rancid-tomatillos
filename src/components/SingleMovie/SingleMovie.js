@@ -6,7 +6,7 @@ import { getAllData } from '../../api-calls';
 
 let movie;
 let videos;
-let index = 0
+let index = 0;
 
 class SingleMovie extends Component {
   constructor() {
@@ -42,6 +42,10 @@ class SingleMovie extends Component {
     }
   }
 
+  resetIndex = () => {
+    index = 0;
+  }
+
   render = () => {
     if (movie === undefined || videos === undefined) {
       return <p className='loading'>Loading...</p>
@@ -49,7 +53,7 @@ class SingleMovie extends Component {
       return (
       <section className='movie-info'> 
         <NavLink to="/" className='link-to-home'>
-          <button className='back-to-home-btn' alt='homeBtn'>X</button>
+          <button className='back-to-home-btn' onClick={this.resetIndex}>X</button>
         </NavLink>
         <img className='single-movie-back-drop' id={movie.id} src={movie.backdrop_path} alt='poster'/>
         <section className='movie-details-container'>
@@ -91,3 +95,13 @@ class SingleMovie extends Component {
 }
 
 export default SingleMovie
+
+
+// Broken Video List: //
+// The Crimes That Bind //
+// Lost Girls and Love Hotels - Vimeo //
+// Force of Nature //
+// Away video 2&4 //
+// Maraton After bad image
+// 
+//

@@ -19,16 +19,13 @@ const MovieContainer = ( {movies} ) => {
         />
       </NavLink>
     )
-  })
-  // console.log(movieCards)
+  });
 
-  
   return (
     <div className ="movie-container" >
       {movieCards}
     </div>
   )
 }
-
 
 export default MovieContainer
