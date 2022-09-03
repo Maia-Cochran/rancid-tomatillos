@@ -1,19 +1,53 @@
 .movie-info{
-    display: grid;
+    box-sizing: border-box;
+    margin: 0;
     justify-items: center;
     align-items: center;
     height: 100%;
     width: 100%;
-    margin: 0;
+    overflow-x: hidden;
     background: rgb(147, 49, 28, .8);
     color: whitesmoke;
     text-decoration: black;
 }
 
+/* ==================================
+     movie details container
+   ================================== */
+
+.movie-details-container {
+    display: grid;
+    contain: content;
+} 
+.movie-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    width: 100%;
+}
+.movie-details img  {
+    max-width: 20vh;
+    max-height: 180px;
+}
+.movie-details .content-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+    gap: .2em;
+}
+.single-movie-overview {
+    width: 100%;
+    contain: content;
+    /* margin-top: 3vh; */
+    padding: 0 10px;
+    flex-wrap: wrap;
+} 
 .back-to-home-btn {
     background-color: black;
     color: white;
-    margin-left: 96vw;
+    margin-left: 90vw;
+    padding: 10px;
+    cursor: pointer;
 }
   
 .back-to-home-btn:hover {
@@ -21,28 +55,37 @@
     background-color: white;
 }
 
-.movie-details-container {
-    /* display: flex; */
-    height: 29vh;
-    contain: content;
-}
 /* ^^^^^NEED TO REFACTOR TO BE RESPONSIVE WITH PAGE */
-.single-movie-mini-poster {
-    position: absolute;
-    height: 20vh;
-    margin: 15px;
+
+/* =========================================
+          movie-video-trailer-container
+    ========================================= */
+.movie-video-trailer-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 
 .single-movie-back-drop{
+    position: absolute;
     align-items: baseline;
-    height: 100vh;
-    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background: linear-gradient(to bottom,
     rgba(64, 64, 64, 1) 0%,
     rgba(64, 64, 64, 0) 10%,
     rgba(64, 64, 64, 0) 90%,
     rgba(64, 64, 64, 1) 100%
     );
+}
+.single-movie-back-drop img{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
 }
 
 p {
@@ -51,59 +94,13 @@ p {
 }
 
 
-.single-movie-title{
-    position: absolute;
-    height: 5vh;
-    margin-left: 12vw;
-}
-
-.single-movie-overview {
-    height: 20vh;
-    width: 45vw;
-    contain: content;
-    margin-top: 3vh;
-    margin-left: 45vw;
-    text-align: center;
-    flex-wrap: wrap;
-}
-
-.single-movie-release-date {
-    position: absolute;
-    margin-top: 8vh;
-    margin-left: 12vw;
-}
-
-.genres {
-    position: absolute;
-    margin-top: 16vh;
-    margin-left: 12vw;
-    width: 20vw;
-}
-
-.budget {
-    position: absolute;
-    margin-top: 12vh;
-    margin-left: 12vw;
-}
-
-.runtime {
-    position: absolute;
-    margin-top: 10vh;
-    margin-left: 12vw;
-}
-
-.revenue {
-    position: absolute;
-    margin-top: 14vh;
-    margin-left: 12vw;
-}
 
 .single-movie-rating {
     position: absolute;
     font-size: 2em;
     background-color: white;
     opacity: 50%;
-    margin-top: 75vh;
+    margin-top: 60vh;
     color: black;
     font-weight: 500%;
 }
@@ -114,7 +111,7 @@ p {
     text-align: center;
     opacity: 50%;
     contain: content;
-    margin-top: 60vh;
+    margin-top: 50vh;
     font-size: larger;
     color: black;
     font-weight: 500%;
@@ -138,7 +135,7 @@ p {
     height: 40%;
     width: 42%;
     right: 29%;
-    bottom: -40%;
+    bottom: 0;
 }
 
 .movie-trailer {
@@ -157,4 +154,20 @@ p {
 .next-video {
     height: 100%;
     width: 100%;
+} 
+
+/* ==============================
+        mobile view
+    ============================ */
+@media (max-width: 500px) {
+    .movie-details {
+        grid-template-columns: 1fr;
+    }
+    .single-movie-overview {
+        max-width: 90%;
+        align-self: center;
+    }
+    .back-to-home-btn  {
+        margin-left: 87vw;
+    }
 }
