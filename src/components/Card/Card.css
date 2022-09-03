@@ -5,16 +5,22 @@
   width: 100%;
   border: 1px solid #000000;
   overflow: hidden;
+  box-shadow: 4px 4px 3px rgb(77, 77, 77);
+
 }
 
 .movie-card:hover {
-  box-shadow: 4px 4px 3px black;
   cursor: pointer;
 }
 
 .mini-poster {
   height: 90%;
-  width: inherit;
+  width: 100%;
+  transition: all .2s ease-in-out;
+}
+
+.mini-poster:hover {
+  transform: scale(1.1);
 }
 
 .title-logo-rating {

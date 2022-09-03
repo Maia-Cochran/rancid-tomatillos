@@ -7,7 +7,6 @@ import SingleMovie from '../SingleMovie/SingleMovie';
 import { Route, Switch } from 'react-router-dom';
 import NotFound from '../NotFound/NotFound';
 import InternalServerError from '../InternalServerError/InternalServerError';
-import { Route, Switch } from 'react-router-dom';
 
 class App extends Component{
   constructor () {
@@ -26,7 +25,7 @@ class App extends Component{
   render = () => {
     return (
       <main className = 'app'>
-        <Header />
+        {/* <Header /> */}
         <Switch>
           <Route exact path='/' render={ () => <MovieContainer movies={this.state.movies}/> } />
           <Route exact path='/singlemovie/:id' render={ ({match}) => <SingleMovie id={match.params.id} /> } />

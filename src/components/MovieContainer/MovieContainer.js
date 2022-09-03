@@ -43,10 +43,10 @@ const MovieContainer = ( {movies} ) => {
 
   return (
     <div className="movie-container" >
-      <div className="movie-container-backdrop">
         <img className = 'random-backdrop' src={`${getRandomBackdrop()}`} alt='featured backdrop'/>
+      <div className="movie-container-backdrop">
       </div>
-      <React.Fragment>
+      <React.Fragment className='top-swiper-container'>
         <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
@@ -61,7 +61,8 @@ const MovieContainer = ( {movies} ) => {
         modules={[Parallax, Pagination, Navigation, Mousewheel, Keyboard]}
         className="mySwiper"
         slidesPerView={10}
-        slidesPerGroup={6}
+        slidesPerGroup={5}
+        spaceBetween={5}
         cssMode={true}
         mousewheel={true}
         keyboard={true}
@@ -70,7 +71,7 @@ const MovieContainer = ( {movies} ) => {
           {movieSlidesUpper} 
         </Swiper>
       </React.Fragment>
-      <React.Fragment>
+      <React.Fragment className='bottom-swiper-container'>
         <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
@@ -86,6 +87,7 @@ const MovieContainer = ( {movies} ) => {
         className="mySwiper2"
         slidesPerView={10}
         slidesPerGroup={6}
+        spaceBetween={5}
         cssMode={true}
         mousewheel={true}
         keyboard={true}
