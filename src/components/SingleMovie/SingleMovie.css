@@ -1,0 +1,156 @@
+* {
+  z-index: 2;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 100%;
+}
+
+.link-to-home {
+    width: 3%;
+    height: 5%;
+    align-self: flex-end;
+    margin: 1% 1.5% 0% 0%;
+    font-size: 1.5em;
+    z-index: 3;
+}
+
+.back-to-home-btn {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+.back-to-home-btn:hover {
+    color: black;
+    background-color: white;
+}
+
+.movie-details-container {
+    display: flex;
+    height: 50%;
+    width: 98%;
+    margin: -2.5% 0% 0% .8%;
+    color: white;
+    overflow-y: scroll;
+    background-color: rgb(0, 0, 0, .7);
+}
+
+.single-movie-mini-poster {
+    margin: 3% 0% 0% 7%;
+    height: 80%;
+    width: 12%;
+}
+
+.movie-details-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+    width: 60%;
+}
+
+.single-movie-back-drop {
+    position: absolute;
+    z-index: 1;
+    height: 91%;
+    width: 100%;
+    right: .5%;
+    top: 8.3%;
+}
+
+.single-movie-title {
+    font-size: 2em;
+    margin-bottom: 2%;
+}
+
+.single-movie-overview {
+    text-align: center;
+    font-size: 1.1em;
+    margin: 0% 2% 3% 2%;
+}
+
+.tagline {
+    font-size: 1.3em;
+    margin-bottom: 1%;
+}
+
+.loading {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding-top: 80px;
+    color: white;
+    background-color: rgb(147, 49, 28, .8);
+    text-align: center;
+    font-size: 3em;
+}
+
+.video-box {
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    height: 42%;
+    width: 43%;
+    left: 30%;
+    bottom: 1%;
+}
+
+.movie-trailer {
+    height: 100%;
+    width: 90%;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    width: 10%;
+}
+
+.next-btn-container,
+.previous-btn-container {
+    height: 33%;
+    width: 100%;
+}
+
+.previous-video,
+.next-video {
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: rgb(147, 49, 28, .8);
+    margin: 2px 0px 10px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.previous-video:hover,
+.next-video:hover {
+    background-color: rgba(100, 30, 15, 0.8)
+}
+
+.video-counter {
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: rgb(0, 0, 0, .7);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(147, 49, 28);
+}
+
+::-webkit-scrollbar-corner {
+    background: rgb(0, 0, 0, .7);
+}

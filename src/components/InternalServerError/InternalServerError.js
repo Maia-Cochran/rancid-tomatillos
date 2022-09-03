@@ -1,9 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Status from '../Status/Status';
-import "./InternalServerError.css"
-
-
-
+import "./InternalServerError.css";
 
 const InternalServerError = () => {
     return (
@@ -14,13 +11,5 @@ const InternalServerError = () => {
       </Status>
     );
   }
-  
 
-
-
-
-
-  export default InternalServerError
-
-
-
+export default InternalServerError;
