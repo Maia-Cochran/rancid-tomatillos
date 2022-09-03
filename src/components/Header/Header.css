@@ -14,9 +14,9 @@
 h1 {
   font-size: 2em;
   margin: 10px;
-  filter: drop-shadow(10px 6px 4px rgba(241, 109, 15, 0.25));
 }
 
 .logo-header{
   height: 70%;
+  width: 3%;
 }
