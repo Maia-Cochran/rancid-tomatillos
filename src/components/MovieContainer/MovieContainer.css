@@ -18,7 +18,7 @@
 .movie-container-backdrop {
   display: flex;
   justify-content: flex-start;
-  background-image:  url('https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg');
+  /* background-image:  url('https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   height: 55%;
@@ -26,7 +26,6 @@
   margin: 0%;
 
 }
-
 
 .mySwiper,
 .mySwiper2 {
@@ -39,7 +38,6 @@
   overflow: hidden;
   position: fixed;
 }
-
 
 .mySwiper{
   margin-top: -60px;
