@@ -1,123 +1,83 @@
-.movie-info{
-    display: grid;
-    justify-items: center;
-    align-items: center;
+* {
+  z-index: 2;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
     height: 100%;
-    width: 100%;
-    margin: 0;
-    background: rgb(147, 49, 28, .8);
-    color: whitesmoke;
-    text-decoration: black;
+}
+
+.link-to-home {
+    width: 3%;
+    height: 5%;
+    align-self: flex-end;
+    margin: 1% 1.5% 0% 0%;
+    font-size: 1.5em;
+    z-index: 3;
 }
 
 .back-to-home-btn {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
     background-color: black;
     color: white;
-    margin-left: 96vw;
 }
-  
+
 .back-to-home-btn:hover {
     color: black;
     background-color: white;
 }
 
 .movie-details-container {
-    /* display: flex; */
-    height: 29vh;
-    contain: content;
+    display: flex;
+    height: 50%;
+    width: 98%;
+    margin: -2.5% 0% 0% .8%;
+    color: white;
+    overflow-y: scroll;
+    background-color: rgb(0, 0, 0, .7);
 }
-/* ^^^^^NEED TO REFACTOR TO BE RESPONSIVE WITH PAGE */
+
 .single-movie-mini-poster {
-    position: absolute;
-    height: 20vh;
-    margin: 15px;
+    margin: 3% 0% 0% 7%;
+    height: 80%;
+    width: 12%;
 }
 
-.single-movie-back-drop{
-    align-items: baseline;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(to bottom,
-    rgba(64, 64, 64, 1) 0%,
-    rgba(64, 64, 64, 0) 10%,
-    rgba(64, 64, 64, 0) 90%,
-    rgba(64, 64, 64, 1) 100%
-    );
-}
-
-p {
-    font-size: .75em;
+.movie-details-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 2%;
+    width: 60%;
 }
 
-
-.single-movie-title{
+.single-movie-back-drop {
     position: absolute;
-    height: 5vh;
-    margin-left: 12vw;
+    z-index: 1;
+    height: 91%;
+    width: 100%;
+    right: .5%;
+    top: 8.3%;
+}
+
+.single-movie-title {
+    font-size: 2em;
+    margin-bottom: 2%;
 }
 
 .single-movie-overview {
-    height: 20vh;
-    width: 45vw;
-    contain: content;
-    margin-top: 3vh;
-    margin-left: 45vw;
     text-align: center;
-    flex-wrap: wrap;
-}
-
-.single-movie-release-date {
-    position: absolute;
-    margin-top: 8vh;
-    margin-left: 12vw;
-}
-
-.genres {
-    position: absolute;
-    margin-top: 16vh;
-    margin-left: 12vw;
-    width: 20vw;
-}
-
-.budget {
-    position: absolute;
-    margin-top: 12vh;
-    margin-left: 12vw;
-}
-
-.runtime {
-    position: absolute;
-    margin-top: 10vh;
-    margin-left: 12vw;
-}
-
-.revenue {
-    position: absolute;
-    margin-top: 14vh;
-    margin-left: 12vw;
-}
-
-.single-movie-rating {
-    position: absolute;
-    font-size: 2em;
-    background-color: white;
-    opacity: 50%;
-    margin-top: 75vh;
-    color: black;
-    font-weight: 500%;
+    font-size: 1.1em;
+    margin: 0% 2% 3% 2%;
 }
 
 .tagline {
-    position: absolute;
-    background: white;
-    text-align: center;
-    opacity: 50%;
-    contain: content;
-    margin-top: 60vh;
-    font-size: larger;
-    color: black;
-    font-weight: 500%;
+    font-size: 1.3em;
+    margin-bottom: 1%;
 }
 
 .loading {
@@ -134,27 +94,63 @@ p {
 .video-box {
     display: flex;
     position: absolute;
-    align-items: flex-end;
-    height: 40%;
-    width: 42%;
-    right: 29%;
-    bottom: -40%;
+    align-items: flex-start;
+    height: 42%;
+    width: 43%;
+    left: 30%;
+    bottom: 1%;
 }
 
 .movie-trailer {
     height: 100%;
-    width: 80%;
+    width: 90%;
 }
 
-.previous-btn-container,
-.next-btn-container {
-    height: 10%;
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
     width: 10%;
-    margin-bottom: 5px;
+}
+
+.next-btn-container,
+.previous-btn-container {
+    height: 33%;
+    width: 100%;
 }
 
 .previous-video,
 .next-video {
     height: 100%;
     width: 100%;
+    color: white;
+    background-color: rgb(147, 49, 28, .8);
+    margin: 2px 0px 10px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.previous-video:hover,
+.next-video:hover {
+    background-color: rgba(100, 30, 15, 0.8)
+}
+
+.video-counter {
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: rgb(0, 0, 0, .7);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(147, 49, 28);
+}
+
+::-webkit-scrollbar-corner {
+    background: rgb(0, 0, 0, .7);
 }

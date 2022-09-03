@@ -1,7 +1,6 @@
 .movie-card {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
   height: 100%;
   width: 100%;
   border: 2px solid #000000;
@@ -46,6 +45,7 @@ color: white;
 
 .logo {
   height: 50%;
+  width: 10%;
   align-self: center;
 }
 
