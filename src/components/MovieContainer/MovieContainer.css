@@ -21,15 +21,16 @@
   background-image:  url('https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 60%;
+  height: 55%;
   width: 100%;
   margin: 0%;
+
 }
 
 
 .mySwiper,
 .mySwiper2 {
-  height: 20%;
+  height: 25%;
   width: 100%;
   margin-top: 0%;
   margin-left: 1em;
