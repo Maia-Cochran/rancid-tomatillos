@@ -1,10 +1,11 @@
 .movie-card {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
   height: 100%;
   width: 100%;
   border: 1px solid #000000;
+  overflow: hidden;
+  /* position: fixed; */
 }
 
 .movie-card:hover {
@@ -13,13 +14,13 @@
 }
 
 .mini-poster {
-  height: 85%;
+  height: 100%;
   width: inherit;
 }
 
 .title-logo-rating {
   display: flex;
-  height: 15%;
+  height: 10%;
   width: 100%;
   background-color: #3d3c3c;
 }
