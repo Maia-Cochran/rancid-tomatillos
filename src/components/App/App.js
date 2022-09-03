@@ -7,6 +7,7 @@ import SingleMovie from '../SingleMovie/SingleMovie';
 import { Route, Switch } from 'react-router-dom';
 import NotFound from '../NotFound/NotFound';
 import InternalServerError from '../InternalServerError/InternalServerError';
+import { Route, Switch } from 'react-router-dom';
 
 class App extends Component{
   constructor () {
@@ -21,8 +22,6 @@ class App extends Component{
     this.setState({ movies: [...data[0].movies] })
     })
   }
-
-
       
   render = () => {
     return (
