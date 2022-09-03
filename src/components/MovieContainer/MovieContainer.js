@@ -33,12 +33,12 @@ const MovieContainer = ( {movies} ) => {
 
   const movieSlidesLower = movieSlidesUpper.slice().reverse()
 
-  const randomBackground = (obj) => {
-    let keys = Object.keys(obj);
-    let random = obj[keys[(keys.length * Math.random()) << 0]];
-    console.log(`random`,random)
-    return random
-  } 
+  // const randomBackground = (obj) => {
+  //   let keys = Object.keys(obj);
+  //   let random = obj[keys[(keys.length * Math.random()) << 0]];
+  //   console.log(`random`,random)
+  //   return random
+  // } 
 
 //   const randomElement = (array) => {
 //     let randomIndex = array[Math.floor(Math.random() * 40)]
@@ -56,7 +56,7 @@ const MovieContainer = ( {movies} ) => {
   //   backgroundSize: "contain",
   // }
 
-
+// ****~~~^^^~~~~~~~InPRocess of making a random coverpage**~~~~^^^^~~~*****
 
 console.log(`randomBackground`, )
   return (
