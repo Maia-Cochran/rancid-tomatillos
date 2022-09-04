@@ -35,7 +35,7 @@ class SingleMovie extends Component {
   
   trailerSlides = () => { 
     let trailerSlides = videos.map(video => {
-      return <SwiperSlide className='swiper-slide' key={video.id}> <ReactPlayer url={`https://www.youtube.com/watch?v=${video.key}`}/> </SwiperSlide>
+      return <SwiperSlide className='swiper-slide' key={video.id}> <ReactPlayer className='video' controls={true} height='90%' width='98%' url={`https://www.youtube.com/watch?v=${video.key}`}/> </SwiperSlide>
     })
     return trailerSlides
   }
@@ -77,7 +77,7 @@ class SingleMovie extends Component {
             }}
             navigation={true}
             modules={[Pagination, Navigation, Mousewheel, Keyboard]}
-            className="mySwiperMovies"
+            className="my-swiper-movies"
             slidesPerView={1}
             slidesPerGroup={1}
             cssMode={true}

@@ -90,73 +90,52 @@
     font-size: 3em;
 }
 
-.feature-wrapper{
+.feature-wrapper {
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
     align-self: center;
     height: 100%;
     width: 100%;
 }
 
-.video-box{
-    height: 150%;
-    width: 150%;
-}
-
 .video-container {
     display: flex;
-    /* position: absolute; */
     align-items: center;
     justify-content: center;
-    /* height: 58%; */
-    /* width: 48%; */
-    /* left: 28%; */
-    margin-top: .5em;
-}
-
-.swiper {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
+    margin-top: 7%;
 }
   
 .feature-wrapper {
-text-align: center;
-font-size: 18px;
-/* background: rgba(255, 255, 255, 0.5); */
-
-/* Center slide text vertically */
-display: -webkit-box;
-display: -ms-flexbox;
-display: -webkit-flex;
-display: flex;
--webkit-box-pack: center;
--ms-flex-pack: center;
--webkit-justify-content: center;
-justify-content: center;
--webkit-box-align: center;
--ms-flex-align: center;
--webkit-align-items: center;
-align-items: center;
-}
-  
-.swiper-slide video {
-display: block;
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-
-.mySwiperMovies {
-    width:30%;
-    margin-bottom: 20px;
-}
-
-.video-counter {
     text-align: center;
-    color: white;
-    font-size: 1.5em;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.my-swiper-movies {
+    width: 40%;
+    height: 270%;
+    margin-bottom: 1%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.video {
+    margin: 1%;
+    box-shadow: 5px 0px 5px black, -5px 0px 5px black, 0px 5px 5px black, 0px -5px 5px black;
 }
 
 ::-webkit-scrollbar {
@@ -172,16 +151,3 @@ object-fit: cover;
 ::-webkit-scrollbar-corner {
     background: rgb(0, 0, 0, .7);
 }
-
-/* .feature-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    font-size: 50px;
-    font-family: "courier new";
-  } */
-  
-  .feature-wrapper > p {
-    margin: 0px;
-  }
