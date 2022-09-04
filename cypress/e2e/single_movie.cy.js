@@ -26,8 +26,42 @@ describe('empty spec', () => {
     })
   })
 
+  it('makes a call to the API to access the movie trailer video', () => {
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/597398/videos', {
+      videos: [
+      {
+      id: 313, 
+      movie_id: 597398,
+      key: "cSI85iGoH_s",
+      site: "YouTube",
+      type: "Trailer"
+    },
+    {
+      id: 312,
+      movie_id: 597398,
+      key: "334196246",
+      site: "Vimeo",
+      type: "Trailer"
+    },
+    {
+      id: 314,
+      movie_id: 597398,
+      key: "J885t4B3PmI",
+      site: "YouTube",
+      type: "Trailer"
+    },
+    {
+      id: 311,
+      movie_id: 597398,
+      key: "255250498",
+      site: "Vimeo",
+      type: "Trailer"
+    }
+    ]})
+  })
+
   it('should be able to visit the page and find the X button to return to the main page', () => {
-    cy.get('[class=back-to-home-btn')
+    cy.get('[class*=back-to-home-btn')
     .contains('X')
   })
 
@@ -39,7 +73,7 @@ describe('empty spec', () => {
   })
   
   it('should find the SingleMovie with the single movie details', () =>{
-    cy.get('section[class="movie-info"]')
+    cy.get('[class*="movie-info"]')
     .should('be.visible')
     .get('[class*=movie-details-container]')
     .get('[class*=single-movie-mini-poster]')
@@ -60,7 +94,8 @@ describe('empty spec', () => {
     .should('be.visible')
   })
 
-  it('should find the trailer videos for single movies', () => {
-    
-  })
+  // it('should find the trailer videos for single movie selected', () => {
+  //   cy.get('[class*= "video-container"]')
+  //   .
+  // })
 })
