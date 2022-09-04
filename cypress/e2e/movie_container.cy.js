@@ -358,21 +358,19 @@ describe('Movie Container user flows', () => {
   })
 
   it('should be able to click on the swiper buttons to scan through the carousel of movies', () => {
-    cy.get('[class*=nav]')
-    .contains('Money Plane')
-    .get('[class^=swiper-pagination]')
+    cy.get('[class^=swiper-button-next]')
     .click( {multiple: true} )
   })
 
   it('should be able to click on a movie and go to the details page for that movie', () => {
-    cy.get('[class*=mySwiper]')
+    cy.get('[class*=my-swiper]')
     .children()
     .contains('Money Plane')
     .click()
     .get('h2')
     .contains('Money Plane')
     .go('back')
-    .get('[class*=mySwiper2]')
+    .get('[class*=my-swiper2]')
     .children()
     .contains('The King of Staten Island')
     .click()
