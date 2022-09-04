@@ -7,8 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/mousewheel";
-import { Parallax, Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
-
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import ReactPlayer from 'react-player'
 
 let movie;
 let videos;
@@ -37,7 +37,7 @@ class SingleMovie extends Component {
 
   trailerSlides = () =>{ 
     videos.map(video => {
-    return <SwiperSlide>{video}</SwiperSlide>
+    return <SwiperSlide>{`https://www.youtube.com/watch?v=${this.state.video.key}`}</SwiperSlide>
   })
 }
 
@@ -103,13 +103,52 @@ class SingleMovie extends Component {
             mousewheel={true}
             keyboard={true}
         >   
+         <SwiperSlide>
          <div className="feature-wrapper">
-           {this.trailerSlides} 
+          {videos.length > 0 && <section className='video-box'> 
+           <ReactPlayer   url={this.trailerSlides}/>
+          </section>}
           </div>
+          </SwiperSlide>
+          <SwiperSlide>
+         <div className="feature-wrapper">
+          {videos.length > 0 && <section className='video-box'> 
+           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key[1]}`}/>
+          </section>}
+          </div>
+          </SwiperSlide>
+          <SwiperSlide>
+         <div className="feature-wrapper">
+          {videos.length > 0 && <section className='video-box'> 
+           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key}`}/>
+          </section>}
+          </div>
+          </SwiperSlide>
+          <SwiperSlide>
+         <div className="feature-wrapper">
+          {videos.length > 0 && <section className='video-box'> 
+           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key}`}/>
+          </section>}
+          </div>
+          </SwiperSlide>
+          <SwiperSlide>
+         <div className="feature-wrapper">
+          {videos.length > 0 && <section className='video-box'> 
+           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key}`}/>
+          </section>}
+          </div>
+          </SwiperSlide>
+          <SwiperSlide>
+         <div className="feature-wrapper">
+          {videos.length > 0 && <section className='video-box'> 
+           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key}`}/>
+          </section>}
+          </div>
+          </SwiperSlide>
         </Swiper>
       </div>
-        {videos.length > 0 && <section className='video-box'>
-          <iframe className='movie-trailer'
+       
+          {/* <iframe className='movie-trailer'
             src={`https://www.youtube.com/embed/${this.state.video.key}`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -124,8 +163,8 @@ class SingleMovie extends Component {
             <div className='previous-btn-container'>
               {videos.length > 1 && index > 0 && <button className='previous-video' onClick={this.previousVideo} >Previous</button>}
             </div>
-          </div>
-        </section>}
+          </div> */}
+       
       </section>
       )
     }
