@@ -13,7 +13,7 @@ class Card extends Component{
 
 render  () {
   return (
-    <NavLink className='nav' to={`/modal/${this.props.id}`} key={this.props.title}> 
+    <NavLink className='nav' to={`/singlemovie/${this.props.id}`} key={this.props.id}> 
       <div className='movie-card feature-wrapper' key={this.props.id}>
           <img className='mini-poster' src={this.props.posterImage} alt='poster' />
           <div className='title-logo-rating'>

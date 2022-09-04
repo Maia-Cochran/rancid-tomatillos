@@ -16,6 +16,7 @@
     margin: 1% 1.5% 0% 0%;
     font-size: 1.5em;
     z-index: 3;
+    border: 1px solid white;
 }
 
 .back-to-home-btn {
@@ -34,8 +35,8 @@
 .movie-details-container {
     display: flex;
     height: 50%;
-    width: 98%;
-    margin: -2.5% 0% 0% .8%;
+    width: 100%;
+    margin-top: -4.5%;
     color: white;
     overflow-y: scroll;
     background-color: rgb(0, 0, 0, .7);
@@ -58,21 +59,19 @@
 .single-movie-back-drop {
     position: absolute;
     z-index: 1;
-    height: 91%;
+    height: 100%;
     width: 100%;
-    right: .5%;
-    top: 8.3%;
 }
 
 .single-movie-title {
     font-size: 2em;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
 .single-movie-overview {
     text-align: center;
     font-size: 1.1em;
-    margin: 0% 2% 3% 2%;
+    margin: 0% 2% 1% 2%;
 }
 
 .tagline {
@@ -95,15 +94,16 @@
     display: flex;
     position: absolute;
     align-items: flex-start;
-    height: 42%;
-    width: 43%;
-    left: 30%;
-    bottom: 1%;
+    height: 58%;
+    width: 48%;
+    left: 28%;
+    bottom: 3%;
 }
 
 .movie-trailer {
     height: 100%;
     width: 90%;
+    box-shadow: 5px 0px 5px black, -5px 0px 5px black, 0px -5px 5px black, 0px 5px 5px black
 }
 
 .btn-container {
@@ -148,7 +148,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(147, 49, 28);
+    background: rgb(43, 43, 43, .8);
 }
 
 ::-webkit-scrollbar-corner {
