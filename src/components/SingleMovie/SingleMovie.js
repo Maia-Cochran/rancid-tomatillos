@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './SingleMovie.css';
-import dayjs from 'dayjs'
-import { NavLink } from 'react-router-dom'
+import dayjs from 'dayjs';
+import { NavLink } from 'react-router-dom';
 import { getAllData } from '../../api-calls';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/mousewheel";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
 
 let movie;
 let videos;
@@ -19,14 +19,14 @@ class SingleMovie extends Component {
     this.state = {
       movie: [],
       video: []
-    }
-  }
+    };
+  };
   
   componentDidMount = () => {
     getAllData(`/movies/${this.props.id}`).then(data => {
       this.setState({ movie: [data[0].movie] })
       movie = data[0].movie
-    })
+    });
 
     getAllData(`/movies/${this.props.id}/videos`).then(data => {
       this.setState({ video: data[0].videos[0] })
@@ -34,14 +34,14 @@ class SingleMovie extends Component {
       videos = data[0].videos
       console.log('data[0].videos', videos)
     })
-  }
+  };
   
   trailerSlides = () => { 
     let trailerSlides = videos.map(video => {
       return <SwiperSlide className='swiper-slide' key={video.id}> <ReactPlayer className='video' controls={true} height='90%' width='98%' url={`https://www.youtube.com/watch?v=${video.key}`}/> </SwiperSlide>
     })
     return trailerSlides
-  }
+  };
 
   render = () => {
     if (movie === undefined || videos === undefined) {
@@ -94,16 +94,6 @@ class SingleMovie extends Component {
       )
     }
   }
-}
+};
 
-export default SingleMovie
-
-
-// Broken Video List: //
-// The Crimes That Bind //
-// Lost Girls and Love Hotels - Vimeo //
-// Force of Nature //
-// Away video 2&4 //
-// Maraton After bad image
-// 
-//
+export default SingleMovie;

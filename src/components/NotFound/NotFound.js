@@ -18,6 +18,6 @@ const NotFound = () => {
         </div>
       </Status>
     );
-  }
+  };
 
-export default NotFound
+export default NotFound;

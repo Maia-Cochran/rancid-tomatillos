@@ -10,7 +10,7 @@ const getAllData = (data) => {
       return responses
     })
     return result;
-  }
+  };
  
 export { getAllData }
 
