@@ -43,7 +43,8 @@ Rancid Tomatillos is an application that allows a user to browse through a list 
 
 ## Illustrations
 
-- TBD
+- ![Video Demo](https://user-images.githubusercontent.com/101746747/188334043-fc8aceab-6abb-489b-8cd0-bf8881f569af.webm)
+- ![Video Error Demo]()
 
 ## Future Additions and Improvements
 
