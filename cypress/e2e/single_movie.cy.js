@@ -26,18 +26,13 @@ describe('empty spec', () => {
     })
   })
 
-  it('should be able to visit the page and find the header', () => {
-    cy.get('h1')
-    .contains('Rancid Tomatillos')
+  it('should be able to visit the page and find the X button to return to the main page', () => {
+    cy.get('[class=back-to-home-btn')
+    .contains('X')
   })
 
-  it('should be able to find the logo', () => {
-    cy.get('img[class="logo-header"]')
-    .should('be.visible')
-  })
-  
   it('should return home when the X button is clicked', () => {
-    cy.get('button')
+    cy.get('[class=back-to-home-btn')
     .click()
     .get('div[class="movie-container"]')
     .should('be.visible')
@@ -45,8 +40,6 @@ describe('empty spec', () => {
   
   it('should find the SingleMovie with the single movie details', () =>{
     cy.get('section[class="movie-info"]')
-    .should('be.visible')
-    .children()
     .should('be.visible')
     .get('[class*=movie-details-container]')
     .get('[class*=single-movie-mini-poster]')
