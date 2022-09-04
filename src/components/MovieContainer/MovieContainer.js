@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/mousewheel";
-import { Parallax, Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import { Parallax, Navigation, Mousewheel, Keyboard } from "swiper";
 
 const MovieContainer = ( {movies} ) => {
   
@@ -59,12 +59,9 @@ const MovieContainer = ( {movies} ) => {
         }}
         speed={600}
         parallax={true}
-        pagination={{
-          clickable: true,
-        }}
         navigation={true}
-        modules={[Parallax, Pagination, Navigation, Mousewheel, Keyboard]}
-        className="mySwiper"
+        modules={[Parallax, Navigation, Mousewheel, Keyboard]}
+        className="my-swiper"
         slidesPerView={10}
         slidesPerGroup={5}
         spaceBetween={5}
@@ -85,12 +82,9 @@ const MovieContainer = ( {movies} ) => {
         }}
         speed={600}
         parallax={true}
-        pagination={{
-          clickable: true,
-        }}
         navigation={true}
-        modules={[Parallax, Pagination, Navigation, Mousewheel, Keyboard]}
-        className="mySwiper2"
+        modules={[Parallax, Navigation, Mousewheel, Keyboard]}
+        className="my-swiper2"
         slidesPerView={10}
         slidesPerGroup={5}
         spaceBetween={5}
