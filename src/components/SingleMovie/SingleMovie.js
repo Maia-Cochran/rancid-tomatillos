@@ -27,9 +27,12 @@ class SingleMovie extends Component {
       this.setState({ movie: [data[0].movie] })
       movie = data[0].movie
     })
+
     getAllData(`/movies/${this.props.id}/videos`).then(data => {
       this.setState({ video: data[0].videos[0] })
+      console.log('data[0].videos', videos)
       videos = data[0].videos
+      console.log('data[0].videos', videos)
     })
   }
   
