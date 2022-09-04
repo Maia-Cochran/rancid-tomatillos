@@ -25,7 +25,7 @@ const MovieContainer = ( {movies} ) => {
   })
 
   const movieSlides = movieCards.map(movie => {
-    return <SwiperSlide>{movie}</SwiperSlide>
+    return <SwiperSlide key={movie.id}>{movie}</SwiperSlide>
   })
 
   const movieSlidesUpper = movieSlides.filter((movie, index) => index < 20)
@@ -71,6 +71,7 @@ const MovieContainer = ( {movies} ) => {
         cssMode={true}
         mousewheel={true}
         keyboard={true}
+        key={1}
         >   
           <div slot="container-start" className="parallax-bg" data-swiper-parallax="-23%"></div> 
           {movieSlidesUpper} 
@@ -91,11 +92,12 @@ const MovieContainer = ( {movies} ) => {
         modules={[Parallax, Pagination, Navigation, Mousewheel, Keyboard]}
         className="mySwiper2"
         slidesPerView={10}
-        slidesPerGroup={6}
+        slidesPerGroup={5}
         spaceBetween={5}
         cssMode={true}
         mousewheel={true}
         keyboard={true}
+        key={2}
         >   
           <div slot="container-start" className="parallax-bg2" data-swiper-parallax="-23%"></div> 
           {movieSlidesLower}  
