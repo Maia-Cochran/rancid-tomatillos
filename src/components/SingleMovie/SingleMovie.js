@@ -3,6 +3,12 @@ import './SingleMovie.css';
 import dayjs from 'dayjs'
 import { NavLink } from 'react-router-dom'
 import { getAllData } from '../../api-calls';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/mousewheel";
+import { Parallax, Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+
 
 let movie;
 let videos;
@@ -27,6 +33,13 @@ class SingleMovie extends Component {
       videos = data[0].videos
     })
   }
+
+
+  trailerSlides = () =>{ 
+    videos.map(video => {
+    return <SwiperSlide>{video}</SwiperSlide>
+  })
+}
 
   nextVideo = () => {
     if (index < videos.length - 1) {
@@ -70,6 +83,31 @@ class SingleMovie extends Component {
             <p className='single-movie-rating'><i><b>Avg. Rating: </b>{(movie.average_rating).toFixed(1)}/10</i></p>
           </div>
         </section>
+        <div className='video-container'>
+        <Swiper
+        style={{
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            }}
+            speed={600}
+            parallax={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation, Mousewheel, Keyboard]}
+            className="mySwiperMovies"
+            slidesPerView={1}
+            slidesPerGroup={1}
+            cssMode={true}
+            mousewheel={true}
+            keyboard={true}
+        >   
+         <div className="feature-wrapper">
+           {this.trailerSlides} 
+          </div>
+        </Swiper>
+      </div>
         {videos.length > 0 && <section className='video-box'>
           <iframe className='movie-trailer'
             src={`https://www.youtube.com/embed/${this.state.video.key}`}
