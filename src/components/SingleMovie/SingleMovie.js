@@ -37,7 +37,7 @@ class SingleMovie extends Component {
 
   trailerSlides = () =>{ 
     videos.map(video => {
-    return <SwiperSlide>{`https://www.youtube.com/watch?v=${this.state.video.key}`}</SwiperSlide>
+    return <SwiperSlide>{video}</SwiperSlide>
   })
 }
 
@@ -103,48 +103,12 @@ class SingleMovie extends Component {
             mousewheel={true}
             keyboard={true}
         >   
-         <SwiperSlide>
          <div className="feature-wrapper">
-          {videos.length > 0 && <section className='video-box'> 
-           <ReactPlayer   url={this.trailerSlides}/>
-          </section>}
+          {/* {videos.length > 0 && <section className='video-box'>  */}
+          {this.trailerSlides}
+           {/* <ReactPlayer   url={this.trailerSlides}/> */}
+          {/* </section>} */}
           </div>
-          </SwiperSlide>
-          <SwiperSlide>
-         <div className="feature-wrapper">
-          {videos.length > 0 && <section className='video-box'> 
-           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key[1]}`}/>
-          </section>}
-          </div>
-          </SwiperSlide>
-          <SwiperSlide>
-         <div className="feature-wrapper">
-          {videos.length > 0 && <section className='video-box'> 
-           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key}`}/>
-          </section>}
-          </div>
-          </SwiperSlide>
-          <SwiperSlide>
-         <div className="feature-wrapper">
-          {videos.length > 0 && <section className='video-box'> 
-           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key}`}/>
-          </section>}
-          </div>
-          </SwiperSlide>
-          <SwiperSlide>
-         <div className="feature-wrapper">
-          {videos.length > 0 && <section className='video-box'> 
-           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key}`}/>
-          </section>}
-          </div>
-          </SwiperSlide>
-          <SwiperSlide>
-         <div className="feature-wrapper">
-          {videos.length > 0 && <section className='video-box'> 
-           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key}`}/>
-          </section>}
-          </div>
-          </SwiperSlide>
         </Swiper>
       </div>
        
