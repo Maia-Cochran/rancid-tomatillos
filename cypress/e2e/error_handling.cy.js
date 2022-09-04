@@ -1,12 +1,21 @@
 describe('Error handling', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.visit('http://localhost:3000/NotFound')
   })
 
   it('should display the Not Found component', () => {
-    cy.visit('http://localhost:3000/NotFound')
-    cy.get('h1')
+    cy.get('[class*=error-wrapper]')
     .should('be.visible')
-    .contains(`Sorry, can't find that.`)
+    .get('h1')
+    .should('be.visible')
+    .contains('Sorry,')
+    .get('h1')
+    .should('be.visible')
+    .contains('can\'t find that.')
+    .get('h2')
+    .should('be.visible')
+    .contains('404')
+    .get('[class*=splat]')
+    .should('be.visible')
   })
 })
