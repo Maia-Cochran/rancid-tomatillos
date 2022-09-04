@@ -59,4 +59,8 @@ describe('empty spec', () => {
     .get('[class*=single-movie-back-drop]')
     .should('be.visible')
   })
+
+  it('should find the trailer videos for single movies', () => {
+    
+  })
 })
