@@ -104,8 +104,7 @@
     width: 150%;
 }
 
-.video-container
- {
+.video-container {
     display: flex;
     /* position: absolute; */
     align-items: center;
@@ -115,86 +114,50 @@
     /* left: 28%; */
     margin-top: .5em;
 }
+
 .swiper {
     width: 100%;
     height: 100%;
     padding: 10px;
-  }
+}
   
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    /* background: rgba(255, 255, 255, 0.5); */
-  
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-  
-  .swiper-slide video {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .mySwiperMovies {
-      /* height: 500px; */
-      width:700px;
-      margin-bottom: 20px;
-      /* border-radius: 40px; */
-  }
+.feature-wrapper {
+text-align: center;
+font-size: 18px;
+/* background: rgba(255, 255, 255, 0.5); */
 
-/* .movie-trailer {
-    height: 100%;
-    width: 90%;
-    box-shadow: 5px 0px 5px black, -5px 0px 5px black, 0px -5px 5px black, 0px 5px 5px black
+/* Center slide text vertically */
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+  
+.swiper-slide video {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
-.btn-container {
-    display: flex;
-    flex-direction: column;
-    height: 30%;
-    width: 10%;
+.mySwiperMovies {
+    width:30%;
+    margin-bottom: 20px;
 }
-
-.next-btn-container,
-.previous-btn-container {
-    height: 33%;
-    width: 100%;
-}
-
-.previous-video,
-.next-video {
-    height: 100%;
-    width: 100%;
-    color: white;
-    background-color: rgb(147, 49, 28, .8);
-    margin: 2px 0px 10px 5px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.previous-video:hover,
-.next-video:hover {
-    background-color: rgba(100, 30, 15, 0.8) */
-/* } */
 
 .video-counter {
     text-align: center;
     color: white;
     font-size: 1.5em;
-} */
+}
 
 ::-webkit-scrollbar {
     height: 12px;

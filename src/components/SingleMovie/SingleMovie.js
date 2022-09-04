@@ -12,7 +12,6 @@ import ReactPlayer from 'react-player'
 
 let movie;
 let videos;
-let index = 0;
 
 class SingleMovie extends Component {
   constructor() {
@@ -33,30 +32,12 @@ class SingleMovie extends Component {
       videos = data[0].videos
     })
   }
-
-
-  trailerSlides = () =>{ 
-    videos.map(video => {
-    return <SwiperSlide>{`https://www.youtube.com/watch?v=${this.state.video.key}`}</SwiperSlide>
-  })
-}
-
-  nextVideo = () => {
-    if (index < videos.length - 1) {
-    index++
-    this.setState({ video: videos[index] })
-    }
-  }
-
-  previousVideo = () => {
-    if (index > 0) {
-      index--
-      this.setState({ video: videos[index] })
-    }
-  }
-
-  resetIndex = () => {
-    index = 0;
+  
+  trailerSlides = () => { 
+    let trailerSlides = videos.map(video => {
+      return <SwiperSlide className='swiper-slide' key={video.id}> <ReactPlayer url={`https://www.youtube.com/watch?v=${video.key}`}/> </SwiperSlide>
+    })
+    return trailerSlides
   }
 
   render = () => {
@@ -102,69 +83,10 @@ class SingleMovie extends Component {
             cssMode={true}
             mousewheel={true}
             keyboard={true}
-        >   
-         <SwiperSlide>
-         <div className="feature-wrapper">
-          {videos.length > 0 && <section className='video-box'> 
-           <ReactPlayer   url={this.trailerSlides}/>
-          </section>}
-          </div>
-          </SwiperSlide>
-          <SwiperSlide>
-         <div className="feature-wrapper">
-          {videos.length > 0 && <section className='video-box'> 
-           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key[1]}`}/>
-          </section>}
-          </div>
-          </SwiperSlide>
-          <SwiperSlide>
-         <div className="feature-wrapper">
-          {videos.length > 0 && <section className='video-box'> 
-           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key}`}/>
-          </section>}
-          </div>
-          </SwiperSlide>
-          <SwiperSlide>
-         <div className="feature-wrapper">
-          {videos.length > 0 && <section className='video-box'> 
-           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key}`}/>
-          </section>}
-          </div>
-          </SwiperSlide>
-          <SwiperSlide>
-         <div className="feature-wrapper">
-          {videos.length > 0 && <section className='video-box'> 
-           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key}`}/>
-          </section>}
-          </div>
-          </SwiperSlide>
-          <SwiperSlide>
-         <div className="feature-wrapper">
-          {videos.length > 0 && <section className='video-box'> 
-           <ReactPlayer   url={`https://www.youtube.com/watch?v=${this.state.video.key}`}/>
-          </section>}
-          </div>
-          </SwiperSlide>
+        > 
+        {this.trailerSlides()}
         </Swiper>
       </div>
-       
-          {/* <iframe className='movie-trailer'
-            src={`https://www.youtube.com/embed/${this.state.video.key}`}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="Embedded youtube"
-            />
-          <div className='btn-container'>
-            {videos.length > 1 && <p className='video-counter'>{`${index+1}/${videos.length}`}</p>}
-            <div className="next-btn-container">
-              {videos.length > 1 && index < videos.length - 1 && <button className='next-video' onClick={this.nextVideo} >Next</button>}
-            </div>
-            <div className='previous-btn-container'>
-              {videos.length > 1 && index > 0 && <button className='previous-video' onClick={this.previousVideo} >Previous</button>}
-            </div>
-          </div> */}
-       
       </section>
       )
     }
