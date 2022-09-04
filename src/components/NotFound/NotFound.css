@@ -1,5 +1,4 @@
 *{
-/* display: flex; */
 margin: 0%;
 }
 
@@ -7,8 +6,6 @@ margin: 0%;
 .error-wrapper{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
 }
 
 

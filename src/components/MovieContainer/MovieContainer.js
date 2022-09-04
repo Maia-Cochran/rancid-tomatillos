@@ -1,8 +1,8 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import Card from '../Card/Card'
-import './MovieContainer.css'
-import logo from '../../images/rancid-tomatillos.png'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Card from '../Card/Card';
+import './MovieContainer.css';
+import logo from '../../images/rancid-tomatillos.png';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -22,19 +22,19 @@ const MovieContainer = ( {movies} ) => {
         key={movie.id}
       />
     )
-  })
+  });
 
   const movieSlides = movieCards.map(movie => {
     return <SwiperSlide key={movie.id}>{movie}</SwiperSlide>
-  })
+  });
 
-  const movieSlidesUpper = movieSlides.filter((movie, index) => index < 20)
+  const movieSlidesUpper = movieSlides.filter((movie, index) => index < 20);
 
-  const movieSlidesLower = movieSlides.filter((movie, index) => index > 19)
+  const movieSlidesLower = movieSlides.filter((movie, index) => index > 19);
 
   const getRandomIndex = (array) => {
     return array[Math.floor(Math.random()*array.length)]; 
-  }
+  };
 
   let randomMovie
 
@@ -42,7 +42,7 @@ const MovieContainer = ( {movies} ) => {
     if (movies.length > 0) {
       randomMovie = getRandomIndex(movies)
     }
-  }
+  };
   getRandomBackdrop();
 
   return (
@@ -99,9 +99,9 @@ const MovieContainer = ( {movies} ) => {
       </div>
     </div>
   )
-}
+};
 
-export default MovieContainer
+export default MovieContainer;
 
 
 

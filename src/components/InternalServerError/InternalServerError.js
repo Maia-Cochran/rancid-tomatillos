@@ -10,6 +10,6 @@ const InternalServerError = () => {
         </div>
       </Status>
     );
-  }
+  };
 
 export default InternalServerError;

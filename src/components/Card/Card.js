@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Card.css';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 class Card extends Component{
   constructor (props) {
@@ -8,8 +8,8 @@ class Card extends Component{
     this.state ={
         num: 0,
         movies: []
-      }
-    }
+      };
+    };
 
 render  () {
   return (
@@ -24,7 +24,7 @@ render  () {
       </div>
     </NavLink>
     )
-  }
-}
+  };
+};
 
 export default Card;
