@@ -92,10 +92,12 @@ describe('empty spec', () => {
     .contains('4.2')
     .get('[class*=single-movie-back-drop]')
     .should('be.visible')
+    .get('[class*= "video-container"]')
+    .should('be.visible')
   })
 
-  // it('should find the trailer videos for single movie selected', () => {
-  //   cy.get('[class*= "video-container"]')
-  //   .
-  // })
+  it('should be able to click on the swiper buttons to scan through the carousel of movie trailers per SingleMovie', () => {
+    cy.get('[class^=swiper-button-next]')
+    .click( {multiple: true} )
+  })
 })
