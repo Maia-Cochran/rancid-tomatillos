@@ -1,0 +1,30 @@
+*{
+margin: 0%;
+}
+
+
+.error-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+
+h1 {
+    color: rgb(209,215,59);
+    font-size: 60pt;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+h2 {
+    color: white;
+    font-size: 90pt;
+}
+
+.splat{
+     height: 50%;
+     margin-top: -60px;
+}
