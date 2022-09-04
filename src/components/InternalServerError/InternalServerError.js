@@ -1,6 +1,5 @@
 import React from 'react';
 import Status from '../Status/Status';
-import "./InternalServerError.css";
 
 const InternalServerError = () => {
     return (
