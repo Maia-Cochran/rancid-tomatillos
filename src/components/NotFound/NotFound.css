@@ -1,0 +1,40 @@
+*{
+/* display: flex; */
+margin: 0%;
+}
+
+
+.error-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+
+
+h1 {
+    display: flex;
+    color: rgb(209,215,59);
+    font-size: 60pt;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    margin-left: 30px;
+    width: 600px;
+}
+
+
+h2 {
+    display: flex;
+    color: white;
+    font-size: 90pt;
+    margin-left: 150px;
+}
+
+
+.splat{
+    display: flex;
+     height: 40%;
+     margin-top: -300px;
+     margin-left: 300px;
+}
