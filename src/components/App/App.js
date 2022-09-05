@@ -12,14 +12,14 @@ class App extends Component{
     super();
     this.state ={
         movies: [],
-      }
+      };
   };
 
   componentDidMount = () => {
     getAllData('/movies').then(data => {
     this.setState({ movies: [...data[0].movies] })
     })
-  }
+  };
       
   render = () => {
     return (
@@ -32,7 +32,7 @@ class App extends Component{
         </Switch>
       </main>
     )
-  }
-}
+  };
+};
 
 export default App;

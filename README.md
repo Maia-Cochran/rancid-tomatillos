@@ -33,21 +33,27 @@ Rancid Tomatillos is an application that allows a user to browse through a list 
 
 ## Set Up
 
-1. Start by going [here](https://github.com/camianderson/rancid-tomatillos). From here you will want to click on the green rectangular button titled 'Code'. This should open a drop down menu where you should see a link. To the left of the link there should be an icon with two over lapping squares. You can click the icon to copy the link.
+1. Start by going [here](https://github.com/Maia-Cochran/rancid-tomatillos). From here you will want to click on the green rectangular button titled 'Code'. This should open a drop down menu where you should see a link. To the left of the link there should be an icon with two over lapping squares. You can click the icon to copy the link.
 
-2. You will want to clone down the [repo](https://github.com/camianderson/rancid-tomatillos.git) to you terminal using git clone.
+2. You will want to clone down the [repo](https://github.com/Maia-Cochran/rancid-tomatillos.git) to you terminal using git clone.
 
 3. Once you have cloned the repo, change into the directory and install the project dependencies. Run npm install or npm i to install project dependencies.
 
-4. Run npm start in the terminal to see the page. You will need to copy and paste the local server from the terminal and paste it into your browser. The local server should be simialiar to, ``http://localhost:3000/``. Control + C is the command to stop running the local server. Closing the terminal without stopping the server first could allow the server to continue to run in the background and cause problems.
+4. Run npm start in the terminal to see the page. You will need to copy and paste the local server from the terminal and paste it into your browser. The local server should be similar to, ``http://localhost:3000/``. Control + C is the command to stop running the local server. Closing the terminal without stopping the server first could allow the server to continue to run in the background and cause problems.
 
 ## Illustrations
 
-- TBD
+https://user-images.githubusercontent.com/101746747/188335190-8249bd3e-3b40-4298-8328-1091174b3f42.mp4
+
+https://user-images.githubusercontent.com/101746747/188335223-6f4de0da-c321-4a95-a6d2-1ee0903a4e5d.mp4
 
 ## Future Additions and Improvements
 
-- TBD
+- React-Modal addition
+
+## Deployed Page
+
+You can view our deployed webpage here: [TBD DEPLOYED LINK]
 
 ## Project Spec
 

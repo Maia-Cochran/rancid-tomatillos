@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Route } from 'react-router-dom';
 
 const Status = ({ code, children }) => {
@@ -10,6 +10,6 @@ const Status = ({ code, children }) => {
         }}
       />
     );
-  }
+  };
 
-  export default Status
+  export default Status;

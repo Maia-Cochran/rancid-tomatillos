@@ -66,6 +66,7 @@
 .single-movie-title {
     font-size: 2em;
     margin-bottom: 1%;
+    margin-left: 0%;
 }
 
 .single-movie-overview {
@@ -107,7 +108,6 @@
 .feature-wrapper {
     text-align: center;
     font-size: 18px;
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
