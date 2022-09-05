@@ -1,7 +1,7 @@
 import React from 'react';
 import Status from '../Status/Status';
 import './NotFound.css';
-import splat from '../../images/404-splat.svg';
+import splat from '../../images/tom-splt.png';
 
 
 

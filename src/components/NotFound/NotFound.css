@@ -31,7 +31,8 @@ h2 {
 
 .splat{
     display: flex;
-     height: 40%;
+     height: 60%;
+     width: 60%;
      margin-top: -300px;
      margin-left: 300px;
 }
