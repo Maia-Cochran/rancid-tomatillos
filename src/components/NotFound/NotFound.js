@@ -1,7 +1,7 @@
 import React from 'react';
 import Status from '../Status/Status';
 import './NotFound.css';
-import splat from '../../images/404-splat.svg';
+import splat from '../../images/tom-splt.png';
 
 
 
@@ -14,7 +14,7 @@ const NotFound = () => {
           <h1>Sorry,</h1>
           <h1>can't find that.</h1>
           <h2>404</h2>
-          <img className="splat" src={splat} />
+          <img className="splat" src={splat} alt='Not Found'/>
         </div>
       </Status>
     );
