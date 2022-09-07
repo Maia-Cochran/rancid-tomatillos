@@ -4,15 +4,16 @@
   - [Overview](#overview)
   - [Technologies](#technologies)
   - [Contributors](#contributors)
-  - [Set Up](#set-up)
+  - [Deployed Webpage](#deployed-page)
   - [Illustrations](#illustrations)
   - [Future Additions and Improvements](#future-additions-and-improvements)
   - [Project Spec](#project-spec)
+  - [Set Up](#set-up)
 
 
 ## Overview
 
-Rancid Tomatillos is an application that allows a user to browse through a list of movies, click on the movie cards, view movie details, such as movie images, title, overview, description, and ratings.
+Rancid Tomatillos is an application that allows a user to browse through a list of movies, click on the movie cards, view movie details, such as movie images, title, overview, description, ratings, movie trailers, film budget and revenue (if applicable).
 
 ## Technologies
 
@@ -25,7 +26,6 @@ Rancid Tomatillos is an application that allows a user to browse through a list 
 ![Vercel](https://user-images.githubusercontent.com/101746747/188785090-4abee495-4f46-4dba-b554-e16ded576297.png)
 
 
-
 ## Contributors
 
 - [Chantal Goethals](https://github.com/goecha) | [LinkedIn](https://www.linkedin.com/in/chantalgoethalsgoecha/)
@@ -33,15 +33,10 @@ Rancid Tomatillos is an application that allows a user to browse through a list 
 - [Tom Fettig](https://github.com/tfettig22) | [LinkedIn](https://www.linkedin.com/in/tom-fettig-86323a115/)
 
 
-## Set Up
+## Deployed Page
 
-1. Start by going [here](https://github.com/Maia-Cochran/rancid-tomatillos). From here you will want to click on the green rectangular button titled 'Code'. This should open a drop down menu where you should see a link. To the left of the link there should be an icon with two over lapping squares. You can click the icon to copy the link.
+You can view our deployed webpage [here](https://rancid-tomatillos-gold.vercel.app/)!
 
-2. You will want to clone down the [repo](https://github.com/Maia-Cochran/rancid-tomatillos.git) to you terminal using git clone.
-
-3. Once you have cloned the repo, change into the directory and install the project dependencies. Run npm install or npm i to install project dependencies.
-
-4. Run npm start in the terminal to see the page. You will need to copy and paste the local server from the terminal and paste it into your browser. The local server should be similar to, ``http://localhost:3000/``. Control + C is the command to stop running the local server. Closing the terminal without stopping the server first could allow the server to continue to run in the background and cause problems.
 
 ## Illustrations
 
@@ -54,10 +49,17 @@ https://user-images.githubusercontent.com/101746747/188335223-6f4de0da-c321-4a95
 - React-Modal addition for the SingleMovie view
 - Mobile-friendly responsiveness to the page
 
-## Deployed Page
-
-You can view our deployed webpage [here](https://rancid-tomatillos-gold.vercel.app/)!
-
 ## Project Spec
 
 Click [here](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html) for project specs, provided by [Turing School of Software and Design](https://turing.edu/).
+
+
+## Set Up
+
+1. Start by going [here](https://github.com/Maia-Cochran/rancid-tomatillos). From here you will want to click on the green rectangular button titled 'Code'. This should open a drop down menu where you should see a link. To the left of the link there should be an icon with two over lapping squares. You can click the icon to copy the link.
+
+2. You will want to clone down the [repo](https://github.com/Maia-Cochran/rancid-tomatillos.git) to you terminal using git clone.
+
+3. Once you have cloned the repo, change into the directory and install the project dependencies. Run npm install or npm i to install project dependencies.
+
+4. Run npm start in the terminal to see the page. You will need to copy and paste the local server from the terminal and paste it into your browser. The local server should be similar to, ``http://localhost:3000/``. Control + C is the command to stop running the local server. Closing the terminal without stopping the server first could allow the server to continue to run in the background and cause problems.
