@@ -22,6 +22,8 @@ Rancid Tomatillos is an application that allows a user to browse through a list 
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JSON](https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white)
+![Vercel](https://user-images.githubusercontent.com/101746747/188785090-4abee495-4f46-4dba-b554-e16ded576297.png)
+
 
 
 ## Contributors
@@ -53,7 +55,7 @@ https://user-images.githubusercontent.com/101746747/188335223-6f4de0da-c321-4a95
 
 ## Deployed Page
 
-You can view our deployed webpage here: [TBD DEPLOYED LINK]
+You can view our deployed webpage [here](https://rancid-tomatillos-gold.vercel.app/)!
 
 ## Project Spec
 
