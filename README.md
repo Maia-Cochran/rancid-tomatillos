@@ -51,7 +51,8 @@ https://user-images.githubusercontent.com/101746747/188335223-6f4de0da-c321-4a95
 
 ## Future Additions and Improvements
 
-- React-Modal addition
+- React-Modal addition for the SingleMovie view
+- Mobile-friendly responsiveness to the page
 
 ## Deployed Page
 
