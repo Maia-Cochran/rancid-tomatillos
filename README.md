@@ -36,7 +36,7 @@ Rancid Tomatillos is an application that allows a user to browse through a list 
 ## Deployed Page
 
 You can view our deployed webpage [here](https://rancid-tomatillos-gold.vercel.app/)!
-
+* Please note that the API that is being used to display information about these movies is temporarily down, which may produce some errors on the front-end. As soon as the team responsible for the API has updated and fixed it, everything will return to normal. Sorry for the inconvenience.
 
 ## Illustrations
 
